@@ -1,0 +1,24 @@
+;; Object tasm_labs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tasm_labs/"
+  :tables
+  (list
+
+    (semanticdb-table "mak.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [24 50])
+            ("os" include nil nil [51 72])
+            ("if" code nil nil [74 143])
+            ("if" code nil nil [144 290])
+            ("target" variable nil nil [291 307])
+            ("command" variable nil nil [308 440])
+            ("system" code nil nil [442 472]))          
+      :file "mak.py"
+      :pointmax 473
+      :fsize 472
+      :lastmodtime '(22271 31379 230860 400000)
+      :unmatched-syntax nil))
+  :file "!run!media!postskript!Data!DOSBOX!tasm_labs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

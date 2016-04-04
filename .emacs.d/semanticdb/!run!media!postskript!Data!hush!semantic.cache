@@ -1,0 +1,29 @@
+;; Object hush/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hush/"
+  :tables
+  (list
+    (semanticdb-table "main.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("readline/readline.h" include (:system-flag t) nil [1 31])
+            ("unistd.h" include (:system-flag t) nil [32 51])
+            ("stdint.h" include (:system-flag t) nil [52 71])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [82 91])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [92 105]))                  
+                :type "int")
+                nil [73 705]))          
+      :file "main.c"
+      :pointmax 706
+      :fsize 705
+      :lastmodtime '(22266 20500 359426 400000)
+      :unmatched-syntax nil))
+  :file "!run!media!postskript!Data!hush!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

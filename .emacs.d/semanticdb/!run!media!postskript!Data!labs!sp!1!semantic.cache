@@ -1,0 +1,95 @@
+;; Object 1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "1/"
+  :tables
+  (list
+    (semanticdb-table "main_lin.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("unistd.h" include (:system-flag t) nil [2 21])
+            ("sys/types.h" include (:system-flag t) nil [22 44])
+            ("sys/wait.h" include (:system-flag t) nil [45 66])
+            ("ncurses.h" include (:system-flag t) nil [67 87])
+            ("time.h" include (:system-flag t) nil [88 105])
+            ("stdint.h" include (:system-flag t) nil [106 125])
+            ("stdlib.h" include (:system-flag t) nil [126 145])
+            ("print_time" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("y" variable (:type ("int8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [164 173])
+                    ("x" variable (:type ("int8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [174 183])
+                    ("process_info" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [184 210]))                  
+                :type "void")
+                nil [147 211])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [222 231])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [232 251]))                  
+                :type "int")
+                nil [213 885])
+            ("print_time" function
+               (:arguments 
+                  ( ("y" variable (:type ("int8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [904 913])
+                    ("x" variable (:type ("int8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [914 923])
+                    ("process_info" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [924 949]))                  
+                :type "void")
+                nil [887 1181]))          
+      :file "main_lin.c"
+      :pointmax 1182
+      :fsize 1181
+      :lastmodtime '(22254 61732 390721 800000)
+      :unmatched-syntax nil)
+    (semanticdb-table "main_win.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("windows.h" include (:system-flag t) nil [1 21])
+            ("stdio.h" include (:system-flag t) nil [22 40])
+            ("time.h" include (:system-flag t) nil [41 58])
+            ("DrawTime" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("message" variable
+                       (:pointer 1
+                        :type ("TCHAR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74 89]))                  
+                :type "void")
+                nil [60 90])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [101 110])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type ("TCHAR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [111 125]))                  
+                :type "int")
+                nil [92 1023])
+            ("DrawTime" function
+               (:arguments 
+                  ( ("lpString" variable
+                       (:pointer 1
+                        :type ("TCHAR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1039 1055]))                  
+                :type "void")
+                nil [1025 1178]))          
+      :file "main_win.c"
+      :pointmax 1179
+      :fsize 1243
+      :lastmodtime '(22254 61732 391016 100000)
+      :unmatched-syntax nil))
+  :file "!run!media!postskript!Data!labs!sp!1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

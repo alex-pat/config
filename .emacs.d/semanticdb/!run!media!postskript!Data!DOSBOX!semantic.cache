@@ -1,0 +1,61 @@
+;; Object DOSBOX/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "DOSBOX/"
+  :tables
+  (list
+    (semanticdb-table "HELLOWOR.CPP"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("conio.h" include (:system-flag t) nil [20 38])
+            ("dos.h" include (:system-flag t) nil [39 55])
+            ("sound" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [68 72])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [73 77]))                  
+                :type "void")
+                nil [57 78])
+            ("tm_sound" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("freq" variable (:type "int") (reparse-symbol arg-sub-list) [93 102])
+                    ("time" variable (:type "int") (reparse-symbol arg-sub-list) [103 112]))                  
+                :type "void")
+                nil [79 113])
+            ("mary" variable
+               (:dereference 1
+                :default-value "{
+	164.81, 164.81, 196.00, 0, 164.81, 0, 147.83, 130.82, 123.48, 0, 164.81, 164.81, 196.00, 0, 164.81, 0, 147.83, 130.82, 123.48, 0,
+	1000
+}"
+                :type "double")
+                nil [144 301])
+            ("del" variable
+               (:dereference 1
+                :default-value "{
+	30, 10, 10, 5, 5, 10, 10, 40, 20,
+	20, 30, 10, 10, 5, 5, 10, 10, 40, 20,
+	20
+}"
+                :type "int")
+                nil [327 421])
+            ("main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [432 437]))                  
+                :type "int")
+                nil [423 526])
+            ("tm_sound" function
+               (:arguments 
+                  ( ("freq" variable (:type "int") (reparse-symbol arg-sub-list) [542 551])
+                    ("time" variable (:type "int") (reparse-symbol arg-sub-list) [552 561]))                  
+                :type "void")
+                nil [528 1156]))          
+      :file "HELLOWOR.CPP"
+      :pointmax 1160
+      :fsize 1227
+      :lastmodtime '(22259 54314 0 0)
+      :unmatched-syntax nil))
+  :file "!run!media!postskript!Data!DOSBOX!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

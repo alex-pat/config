@@ -1,0 +1,59 @@
+;; Object postskript/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "postskript/"
+  :tables
+  (list
+    (semanticdb-table "test.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [1 23])
+            ("unistd.h" include (:system-flag t) nil [24 43])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [54 63])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [64 77]))                  
+                :type "int")
+                nil [45 130]))          
+      :file "test.c"
+      :pointmax 131
+      :fsize 160
+      :lastmodtime '(22265 38515 975881 150000)
+      :unmatched-syntax nil)
+    (semanticdb-table "abc.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("unistd.h" include (:system-flag t) nil [40 59])
+            ("readline/readline.h" include (:system-flag t) nil [60 90])
+            ("readline/history.h" include (:system-flag t) nil [91 120])
+            ("main" function (:type "int") nil [122 833]))          
+      :file "abc.c"
+      :pointmax 834
+      :fsize 833
+      :lastmodtime '(22265 34705 302555 707000)
+      :unmatched-syntax nil)
+    (semanticdb-table "findline.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [24 51])
+            ("sys" include nil nil [52 78])
+            ("error" function (:arguments 
+              ( ("description" variable nil (reparse-symbol function_parameters) [91 102]))              ) nil [81 139])
+            ("if" code nil nil [141 222])
+            ("pattern" variable nil nil [223 248])
+            ("if" code nil nil [249 419])
+            ("command" variable nil nil [420 476])
+            ("for" code nil nil [477 686]))          
+      :file "findline.py"
+      :pointmax 686
+      :fsize 685
+      :lastmodtime '(22271 34181 626007 100000)
+      :unmatched-syntax nil))
+  :file "!home!postskript!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
