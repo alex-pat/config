@@ -3,26 +3,22 @@
 (semanticdb-project-database-file "hush/"
   :tables
   (list
-    (semanticdb-table "main.c"
-      :major-mode 'c-mode
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
       :tags 
-        '( ("readline/readline.h" include (:system-flag t) nil [1 31])
-            ("unistd.h" include (:system-flag t) nil [32 51])
-            ("stdint.h" include (:system-flag t) nil [52 71])
-            ("main" function
-               (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [82 91])
-                    ("argv" variable
-                       (:pointer 1
-                        :dereference 1
-                        :type "char")
-                        (reparse-symbol arg-sub-list) [92 105]))                  
-                :type "int")
-                nil [73 705]))          
-      :file "main.c"
-      :pointmax 706
-      :fsize 705
-      :lastmodtime '(22266 20500 359426 400000)
+        '( ("CC" variable (:default-value ("gcc")) nil [1 14])
+            ("RLINE" variable (:default-value ("-lreadline")) nil [14 34])
+            ("STD" variable (:default-value ("-std=c11")) nil [34 52])
+            ("ERRFLG" variable nil nil [52 61])
+            ("DEBUG" variable nil nil [61 70])
+            ("all" function (:arguments ("main" "hush" "builtin")) nil [71 144])
+            ("main" function nil nil [145 221])
+            ("hush" function nil nil [222 289])
+            ("builtin" function nil nil [290 366]))          
+      :file "Makefile"
+      :pointmax 366
+      :fsize 365
+      :lastmodtime '(22286 45134 972970 700000)
       :unmatched-syntax nil))
   :file "!run!media!postskript!Data!hush!semantic.cache"
   :semantic-tag-version "2.0"

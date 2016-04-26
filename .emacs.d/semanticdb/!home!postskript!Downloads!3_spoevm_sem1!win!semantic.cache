@@ -1,0 +1,35 @@
+;; Object win/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "win/"
+  :tables
+  (list
+    (semanticdb-table "laba3.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("windows.h" include (:system-flag t) nil [1 21])
+            ("stdlib.h" include (:system-flag t) nil [22 41])
+            ("stdio.h" include (:system-flag t) nil [42 60])
+            ("string.h" include (:system-flag t) nil [61 80])
+            ("BUFSIZE" variable (:constant-flag t) nil [90 97])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [113 122])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [123 136]))                  
+                :type "int")
+                nil [104 1639]))          
+      :file "laba3.c"
+      :pointmax 1640
+      :fsize 1727
+      :lastmodtime '(22293 55044 932106 513000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BUFSIZE" . ((number "1024" 98 . 102)))
+          )
+))
+  :file "!home!postskript!Downloads!3_spoevm_sem1!win!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,77 @@
+;; Object sem/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sem/"
+  :tables
+  (list
+    (semanticdb-table "laba2.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [21 40])
+            ("stdio.h" include (:system-flag t) nil [41 59])
+            ("unistd.h" include (:system-flag t) nil [60 79])
+            ("sys/ipc.h" include (:system-flag t) nil [80 100])
+            ("sys/sem.h" include (:system-flag t) nil [101 121])
+            ("sem_lock" variable
+               (:dereference 1
+                :default-value "{ 
+				{0, 0, 0},
+				{0, 1, 0}								
+			    }"
+                :type ("sembuf" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [198 275])
+            ("sem_unlock" variable
+               (:default-value "{   
+				0, -1, 0
+			    }"
+                :type ("sembuf" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [279 334])
+            ("pid" variable (:type ("pid_t" type (:type "class") nil nil)) nil [335 345])
+            ("key" variable (:type ("key_t" type (:type "class") nil nil)) nil [346 356])
+            ("sem_id" variable (:type "int") nil [357 368])
+            ("parent" variable (:type "int") nil [370 381])
+            ("islastchar" variable
+               (:default-value "0"
+                :type "int")
+                nil [382 401])
+            ("s" variable
+               (:pointer 1
+                :type "char")
+                nil [403 412])
+            ("ipos" variable
+               (:default-value "0"
+                :type "int")
+                nil [413 426])
+            ("usecon" function (:type "int") nil [428 655])
+            ("exit_failure" function
+               (:arguments 
+                  ( ("cond" variable (:type "int") (reparse-symbol arg-sub-list) [675 684])
+                    ("strerr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [685 699]))                  
+                :type "void")
+                nil [657 776])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [787 796])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [797 811]))                  
+                :type "int")
+                nil [778 1817]))          
+      :file "laba2.c"
+      :pointmax 1824
+      :fsize 1799
+      :lastmodtime '(22255 53640 428743 377000)
+      :unmatched-syntax nil))
+  :file "!home!postskript!Downloads!2_spoevm_sem1!sem!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

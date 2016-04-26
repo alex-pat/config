@@ -219,8 +219,8 @@
                 nil [1672 2300]))          
       :file "HELLOWOR.CPP"
       :pointmax 2304
-      :fsize 2444
-      :lastmodtime '(22262 17478 341553 500000)
+      :fsize 2563
+      :lastmodtime '(22271 44334 69572 100000)
       :unmatched-syntax nil
       :lexical-table 
         '(("rd" . ((number "622.26" 373 . 379)))
@@ -261,7 +261,328 @@
           ("sod" . ((number "830.6" 461 . 466)))
           ("fm" . ((number "659.26" 383 . 389)))
           )
-))
+)
+    (semanticdb-table "apk4.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("dos.h" include (:system-flag t) nil [1 17])
+            ("stdio.h" include (:system-flag t) nil [18 36])
+            ("stdlib.h" include (:system-flag t) nil [37 56])
+            ("conio.h" include (:system-flag t) nil [57 75])
+            ("SIXTEENTH" variable (:constant-flag t) nil [85 94])
+            ("pd" variable (:constant-flag t) nil [114 116])
+            ("pdd" variable (:constant-flag t) nil [132 135])
+            ("pr" variable (:constant-flag t) nil [151 153])
+            ("prd" variable (:constant-flag t) nil [169 172])
+            ("pm" variable (:constant-flag t) nil [188 190])
+            ("pf" variable (:constant-flag t) nil [206 208])
+            ("pfd" variable (:constant-flag t) nil [224 227])
+            ("pso" variable (:constant-flag t) nil [243 246])
+            ("psod" variable (:constant-flag t) nil [261 265])
+            ("pl" variable (:constant-flag t) nil [281 283])
+            ("pld" variable (:constant-flag t) nil [298 301])
+            ("psi" variable (:constant-flag t) nil [317 320])
+            ("d" variable (:constant-flag t) nil [337 338])
+            ("dd" variable (:constant-flag t) nil [354 356])
+            ("r" variable (:constant-flag t) nil [372 373])
+            ("rd" variable (:constant-flag t) nil [389 391])
+            ("m" variable (:constant-flag t) nil [407 408])
+            ("f" variable (:constant-flag t) nil [424 425])
+            ("fd" variable (:constant-flag t) nil [441 443])
+            ("so" variable (:constant-flag t) nil [459 461])
+            ("sod" variable (:constant-flag t) nil [476 479])
+            ("l" variable (:constant-flag t) nil [494 495])
+            ("ld" variable (:constant-flag t) nil [510 512])
+            ("si" variable (:constant-flag t) nil [528 530])
+            ("notes" variable
+               (:dereference 1
+                :default-value "{
+    // swan lake
+    m,
+    pl, psi, d, r, m,
+    d, m, d, m,
+    pl, d, pl, pf, d, pl,
+    m,
+    pl, psi, d, r, m,
+    d, m, d, m,
+    pl, d, pl, pf, d, pl,
+    -1,
+    // crawling
+    dd,
+    si, sod, fd, m, rd, m, dd,
+    si, sod, fd, m, rd, m, dd,
+    si, sod, fd, m, rd, m, dd,
+    si, sod, fd, m, rd, m, dd,
+
+    sod, l, sod, l, sod, 0,
+    sod, 0, sod, l, sod, l, sod, fd,
+    sod, l, sod, l, sod, 0,
+    sod, 0, sod, l, sod, l, sod, fd,
+    l, sod, fd, m, rd, m, dd,
+    si, sod, fd, m, rd, m,
+    
+    1000
+}"
+                :type "double")
+                nil [568 1106])
+            ("del" variable
+               (:dereference 1
+                :default-value "{
+    8,
+    2, 2, 2, 2, 6,
+    2, 6, 2, 6,
+    2, 2, 2, 2, 2, 16,
+    8,
+    2, 2, 2, 2, 6,
+    2, 6, 2, 6,
+    2, 2, 2, 2, 2, 16,
+    1,
+    //crawling
+    2,
+    6, 10, 4, 2, 4, 4, 2,
+    6, 10, 4, 2, 4, 4, 2,
+    6, 10, 4, 2, 4, 4, 2,
+    6, 10, 4, 2, 4, 4, 2,
+
+    6, 2, 6, 2, 14, 1,
+    2, 1, 6, 2, 6, 2, 2, 12,
+    6, 2, 6, 2, 14, 1,
+    2, 1, 6, 2, 6, 2, 2, 12,
+    4, 16, 4, 2, 4, 4, 2,
+    6, 10, 4, 2, 4, 4
+}"
+                :type "int")
+                nil [1132 1564])
+            ("music" function
+               (:prototype-flag t
+                :type "void")
+                nil [1566 1579])
+            ("print" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [1591 1599]))                  
+                :type "void")
+                nil [1580 1600])
+            ("printWord" function
+               (:prototype-flag t
+                :type "void")
+                nil [1601 1618])
+            ("random" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("val" variable (:type "long") (reparse-symbol arg-sub-list) [1631 1640]))                  
+                :type "void")
+                nil [1619 1641])
+            ("get_division" function
+               (:prototype-flag t
+                :type "void")
+                nil [1642 1662])
+            ("main" function (:type "int") nil [1664 2183])
+            ("music" function (:type "void") nil [2185 2859])
+            ("print" function
+               (:arguments 
+                  ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [2872 2880]))                  
+                :type "void")
+                nil [2861 2995])
+            ("printWord" function (:type "void") nil [2997 3295])
+            ("get_division" function (:type "void") nil [3297 4086])
+            ("random" function
+               (:arguments 
+                  ( ("val" variable (:type "long") (reparse-symbol arg-sub-list) [4100 4109]))                  
+                :type "void")
+                nil [4088 4406]))          
+      :file "apk4.cpp"
+      :pointmax 4407
+      :fsize 4695
+      :lastmodtime '(22277 9455 188826 400000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("rd" . ((number "622.26" 392 . 398)))
+          ("so" . ((number "784.0" 462 . 467)))
+          ("pl" . ((number "440.0" 284 . 289)))
+          ("pld" . ((number "466.16" 302 . 308)))
+          ("psi" . ((number "493.88" 321 . 327)))
+          ("pm" . ((number "329.63" 191 . 197)))
+          ("fd" . ((number "739.98" 444 . 450)))
+          ("pdd" . ((number "277.18" 136 . 142)))
+          ("l" . ((number "880.0" 496 . 501)))
+          ("SIXTEENTH" . ((number "5" 95 . 96)))
+          ("m" . ((number "659.26" 409 . 415)))
+          ("pd" . ((number "261.63" 117 . 123)))
+          ("prd" . ((number "311.13" 173 . 179)))
+          ("psod" . ((number "415.30" 266 . 272)))
+          ("pr" . ((number "293.66" 154 . 160)))
+          ("pso" . ((number "392.0" 247 . 252)))
+          ("ld" . ((number "932.32" 513 . 519)))
+          ("si" . ((number "987.76" 531 . 537)))
+          ("pf" . ((number "349.23" 209 . 215)))
+          ("d" . ((number "523.26" 339 . 345)))
+          ("pfd" . ((number "369.99" 228 . 234)))
+          ("dd" . ((number "554.36" 357 . 363)))
+          ("r" . ((number "587.32" 374 . 380)))
+          ("f" . ((number "698.26" 426 . 432)))
+          ("sod" . ((number "830.6" 480 . 485)))
+          )
+)
+    (semanticdb-table "music.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("dos.h" include (:system-flag t) nil [1 17])
+            ("stdio.h" include (:system-flag t) nil [18 36])
+            ("stdlib.h" include (:system-flag t) nil [37 56])
+            ("conio.h" include (:system-flag t) nil [57 75])
+            ("SIXTEENTH" variable (:constant-flag t) nil [85 94])
+            ("pd" variable (:constant-flag t) nil [114 116])
+            ("pdd" variable (:constant-flag t) nil [132 135])
+            ("pr" variable (:constant-flag t) nil [151 153])
+            ("prd" variable (:constant-flag t) nil [169 172])
+            ("pm" variable (:constant-flag t) nil [188 190])
+            ("pf" variable (:constant-flag t) nil [206 208])
+            ("pfd" variable (:constant-flag t) nil [224 227])
+            ("pso" variable (:constant-flag t) nil [243 246])
+            ("psod" variable (:constant-flag t) nil [261 265])
+            ("pl" variable (:constant-flag t) nil [281 283])
+            ("pld" variable (:constant-flag t) nil [298 301])
+            ("psi" variable (:constant-flag t) nil [317 320])
+            ("d" variable (:constant-flag t) nil [337 338])
+            ("dd" variable (:constant-flag t) nil [354 356])
+            ("r" variable (:constant-flag t) nil [372 373])
+            ("rd" variable (:constant-flag t) nil [389 391])
+            ("m" variable (:constant-flag t) nil [407 408])
+            ("f" variable (:constant-flag t) nil [424 425])
+            ("fd" variable (:constant-flag t) nil [441 443])
+            ("so" variable (:constant-flag t) nil [459 461])
+            ("sod" variable (:constant-flag t) nil [476 479])
+            ("l" variable (:constant-flag t) nil [494 495])
+            ("ld" variable (:constant-flag t) nil [510 512])
+            ("si" variable (:constant-flag t) nil [528 530])
+            ("notes" variable
+               (:dereference 1
+                :default-value "{
+    // swan lake
+    m,
+    pl, psi, d, r, m,
+    d, m, d, m,
+    pl, d, pl, pf, d, pl,
+    m,
+    pl, psi, d, r, m,
+    d, m, d, m,
+    pl, d, pl, pf, d, pl,
+    -1,
+    // crawling
+    dd,
+    si, sod, fd, m, rd, m, dd,
+    si, sod, fd, m, rd, m, dd,
+    si, sod, fd, m, rd, m, dd,
+    si, sod, fd, m, rd, m, dd,
+
+    sod, l, sod, l, sod, 0,
+    sod, 0, sod, l, sod, l, sod, fd,
+    sod, l, sod, l, sod, 0,
+    sod, 0, sod, l, sod, l, sod, fd,
+    l, sod, fd, m, rd, m, dd,
+    si, sod, fd, m, rd, m,
+    
+    1000
+}"
+                :type "double")
+                nil [568 1106])
+            ("del" variable
+               (:dereference 1
+                :default-value "{
+    // swan lake
+    8,
+    2, 2, 2, 2, 6,
+    2, 6, 2, 6,
+    2, 2, 2, 2, 2, 16,
+    8,
+    2, 2, 2, 2, 6,
+    2, 6, 2, 6,
+    2, 2, 2, 2, 2, 16,
+    1,
+    // crawling
+    2,
+    6, 10, 4, 2, 4, 4, 2,
+    6, 10, 4, 2, 4, 4, 2,
+    6, 10, 4, 2, 4, 4, 2,
+    6, 10, 4, 2, 4, 4, 2,
+
+    6, 2, 6, 2, 14, 1,
+    2, 1, 6, 2, 6, 2, 2, 12,
+    6, 2, 6, 2, 14, 1,
+    2, 1, 6, 2, 6, 2, 2, 12,
+    4, 16, 4, 2, 4, 4, 2,
+    6, 10, 4, 2, 4, 4
+}"
+                :type "int")
+                nil [1132 1582])
+            ("main" function (:type "int") nil [1584 2270]))          
+      :file "music.cpp"
+      :pointmax 2271
+      :fsize 2435
+      :lastmodtime '(22277 11158 609717 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("rd" . ((number "622.26" 392 . 398)))
+          ("so" . ((number "784.0" 462 . 467)))
+          ("pl" . ((number "440.0" 284 . 289)))
+          ("pld" . ((number "466.16" 302 . 308)))
+          ("psi" . ((number "493.88" 321 . 327)))
+          ("pm" . ((number "329.63" 191 . 197)))
+          ("fd" . ((number "739.98" 444 . 450)))
+          ("pdd" . ((number "277.18" 136 . 142)))
+          ("l" . ((number "880.0" 496 . 501)))
+          ("SIXTEENTH" . ((number "5" 95 . 96)))
+          ("m" . ((number "659.26" 409 . 415)))
+          ("pd" . ((number "261.63" 117 . 123)))
+          ("prd" . ((number "311.13" 173 . 179)))
+          ("psod" . ((number "415.30" 266 . 272)))
+          ("pr" . ((number "293.66" 154 . 160)))
+          ("pso" . ((number "392.0" 247 . 252)))
+          ("ld" . ((number "932.32" 513 . 519)))
+          ("si" . ((number "987.76" 531 . 537)))
+          ("pf" . ((number "349.23" 209 . 215)))
+          ("d" . ((number "523.26" 339 . 345)))
+          ("pfd" . ((number "369.99" 228 . 234)))
+          ("dd" . ((number "554.36" 357 . 363)))
+          ("r" . ((number "587.32" 374 . 380)))
+          ("f" . ((number "698.26" 426 . 432)))
+          ("sod" . ((number "830.6" 480 . 485)))
+          )
+)
+    (semanticdb-table "L3VICTO2.CPP"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("conio.h" include (:system-flag t) nil [40 58])
+            ("dos.h" include (:system-flag t) nil [59 75])
+            ("wasint" variable (:type "int") nil [77 88])
+            ("response" variable (:type "int") nil [89 102])
+            ("interrupt" function
+               (:arguments 
+                  ( ("" variable (:type ("oldh" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [120 125]))                  
+                :type "void")
+                nil [103 130])
+            ("handler" function
+               (:arguments 
+                  ( ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [161 165]))                  
+                :type ("far" type (:type "class") nil nil))
+                nil [149 279])
+            ("exit_my" function
+               (:arguments 
+                  ( ("message" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [294 309]))                  
+                :type "void")
+                nil [281 378])
+            ("main" function (:type "int") nil [380 1069]))          
+      :file "L3VICTO2.CPP"
+      :pointmax 1146
+      :fsize 1109
+      :lastmodtime '(22299 6311 907407 600000)
+      :unmatched-syntax nil))
   :file "!run!media!postskript!Data!DOSBOX!BC!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

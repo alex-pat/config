@@ -1,12 +1,36 @@
- (load-theme 'tango-dark t)
-;(when (window-system)
-;      (set-frame-size (selected-frame) 140 40))
+
+(defun on-frame-creating ()
+  "This function sets font faces and other that not setted on starting emacs daemon"
+  (load-theme 'tango-dark t)
+  (custom-set-faces
+   ;; custom-set-faces was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(default ((t (:family "Hack" :foundry "unknown" :slant normal :weight normal :height 98 :width normal))))) 
+  (toggle-frame-fullscreen))
+
+;; (cons after-make-frame-functions '(on-frame-creating))
+;; after-make-frame-functions
+;; (setq after-make-frame-functions '(x-dnd-init-frame toggle-frame-fullscreen))
+;; (add-to-list 'after-make-frame-functions
+;; 	     'on-frame-creating)
+(if (window-system)
+   (on-frame-creating))
+
+(add-hook 'after-make-frame-functions
+	  #'(lambda (f)
+	      (with-selected-frame f (on-frame-creating))))
+
+;;(toggle-input-method 'russian-coomputer)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(c-default-style "stroustrup")
+ '(default-input-method 'russian-computer)
+ '(c-default-style "stroustrup" t)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -19,9 +43,6 @@
              '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives
 	     '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
 
 (require 'auto-complete)
@@ -84,10 +105,15 @@
 (column-number-mode 1)
 (display-battery-mode 1)
 (display-time-mode 1)
-(toggle-frame-fullscreen)
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
+
 (setq c-default-style "stroustrup")
 
-(add-to-list 'load-path "/run/media/postskript/Data/hush/")
+(setq show-paren-style 'expression )
+(show-paren-mode 2)
+
+
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 

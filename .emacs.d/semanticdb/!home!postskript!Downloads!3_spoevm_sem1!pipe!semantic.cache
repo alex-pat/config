@@ -1,0 +1,68 @@
+;; Object pipe/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pipe/"
+  :tables
+  (list
+    (semanticdb-table "laba3.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 19])
+            ("stdio.h" include (:system-flag t) nil [20 37])
+            ("string.h" include (:system-flag t) nil [38 56])
+            ("unistd.h" include (:system-flag t) nil [57 75])
+            ("signal.h" include (:system-flag t) nil [76 94])
+            ("sys/types.h" include (:system-flag t) nil [95 116])
+            ("fcntl.h" include (:system-flag t) nil [117 134])
+            ("MAXBUF" variable (:constant-flag t) nil [144 150])
+            ("charbuf" variable
+               (:dereference 1
+                :type "char")
+                nil [155 176])
+            ("pipefd" variable
+               (:dereference 1
+                :type "int")
+                nil [178 192])
+            ("pid" variable (:type ("pid_t" type (:type "class") nil nil)) nil [193 203])
+            ("parent" variable (:type "int") nil [204 215])
+            ("sa" variable (:type ("sigaction" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [216 236])
+            ("i" variable (:type "int") nil [237 243])
+            ("sa_receive" function
+               (:arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [261 269]))                  
+                :type "void")
+                nil [245 477])
+            ("sa_respond" function
+               (:arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [495 503]))                  
+                :type "void")
+                nil [479 558])
+            ("sa_child_death" function
+               (:arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [580 588]))                  
+                :type "void")
+                nil [560 667])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [678 687])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [688 702]))                  
+                :type "int")
+                nil [669 1592]))          
+      :file "laba3.c"
+      :pointmax 1593
+      :fsize 1539
+      :lastmodtime '(22293 50802 737429 953000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAXBUF" . ((number "256" 151 . 154)))
+          )
+))
+  :file "!home!postskript!Downloads!3_spoevm_sem1!pipe!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

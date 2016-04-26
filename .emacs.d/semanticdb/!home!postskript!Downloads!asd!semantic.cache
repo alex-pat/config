@@ -1,0 +1,72 @@
+;; Object asd/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "asd/"
+  :tables
+  (list
+    (semanticdb-table "LAB5 (1).cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("dos.h" include (:system-flag t) nil [1 17])
+            ("stdio.h" include (:system-flag t) nil [18 36])
+            ("stdlib.h" include (:system-flag t) nil [37 56])
+            ("conio.h" include (:system-flag t) nil [57 75])
+            ("io.h" include (:system-flag t) nil [76 91])
+            ("windows.h" include (:system-flag t) nil [92 112])
+            ("countMilliseconds" variable
+               (:default-value "0"
+                :type "unsigned int")
+                nil [114 149])
+            ("_far" function
+               (:arguments 
+                  ( ("" variable (:type ("oldVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [205 215]))                  
+                :type ("_interrupt" type (:type "class") nil nil))
+                nil [188 220])
+            ("newVector" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [254 258]))                  
+                :type ("_far" type (:type "class") nil nil))
+                nil [239 259])
+            ("interrupt" function
+               (:arguments 
+                  ( ("" variable (:type ("int_old_alarm" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [300 314]))                  
+                :type "void")
+                nil [284 320])
+            ("resetAlarm" function (:type "void") nil [335 1011])
+            ("bcd_to_dec" function
+               (:arguments 
+                  ( ("bcd_number" variable (:type "int") (reparse-symbol arg-sub-list) [1052 1067]))                  
+                :type "int")
+                nil [1036 1125])
+            ("dec_to_bcd" function
+               (:arguments 
+                  ( ("dec_number" variable (:type "int") (reparse-symbol arg-sub-list) [1166 1181]))                  
+                :type "int")
+                nil [1150 1239])
+            ("getTime" function (:type "void") nil [1241 1803])
+            ("setTime" function (:type "void") nil [1805 2699])
+            ("delay" function
+               (:arguments 
+                  ( ("ms" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2712 2728]))                  
+                :type "void")
+                nil [2701 3040])
+            ("newVector" function
+               (:arguments 
+                  ( ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3073 3077]))                  
+                :type ("_far" type (:type "class") nil nil))
+                nil [3058 3176])
+            ("int_new_alarm" function
+               (:arguments 
+                  ( ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3207 3211]))                  
+                :type ("interrupt" type (:type "class") nil nil))
+                nil [3183 3274])
+            ("setAlarm" function (:type "void") nil [3276 4200])
+            ("main" function (:type "int") nil [4202 4778]))          
+      :file "LAB5 (1).cpp"
+      :pointmax 4779
+      :fsize 5062
+      :lastmodtime '(22295 13636 451040 401000)
+      :unmatched-syntax nil))
+  :file "!home!postskript!Downloads!asd!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

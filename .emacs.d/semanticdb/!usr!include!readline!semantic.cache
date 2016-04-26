@@ -1,0 +1,2478 @@
+;; Object readline/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "readline/"
+  :tables
+  (list
+    (semanticdb-table "readline.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_READLINE_H_" variable (:constant-flag t) nil [956 968])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_restore_state" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [37695 37746])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_save_state" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [37635 37683])
+            ("readline_state" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("point" variable (:type "int") (reparse-symbol classsubparts) [37078 37088])
+                    ("end" variable (:type "int") (reparse-symbol classsubparts) [37091 37099])
+                    ("mark" variable (:type "int") (reparse-symbol classsubparts) [37102 37111])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [37114 37127])
+                    ("buflen" variable (:type "int") (reparse-symbol classsubparts) [37130 37141])
+                    ("ul" variable
+                       (:pointer 1
+                        :type ("UNDO_LIST" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [37144 37158])
+                    ("prompt" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [37161 37174])
+                    ("rlstate" variable (:type "int") (reparse-symbol classsubparts) [37199 37211])
+                    ("done" variable (:type "int") (reparse-symbol classsubparts) [37214 37223])
+                    ("kmap" variable (:type ("Keymap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [37226 37238])
+                    ("lastfunc" variable
+                       (:pointer 1
+                        :type ("rl_command_func_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [37262 37290])
+                    ("insmode" variable (:type "int") (reparse-symbol classsubparts) [37293 37305])
+                    ("edmode" variable (:type "int") (reparse-symbol classsubparts) [37308 37319])
+                    ("kseqlen" variable (:type "int") (reparse-symbol classsubparts) [37322 37334])
+                    ("inf" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [37337 37347])
+                    ("outf" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [37350 37361])
+                    ("pendingin" variable (:type "int") (reparse-symbol classsubparts) [37364 37378])
+                    ("macro" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [37381 37393])
+                    ("catchsigs" variable (:type "int") (reparse-symbol classsubparts) [37418 37432])
+                    ("catchsigwinch" variable (:type "int") (reparse-symbol classsubparts) [37435 37453])
+                    ("reserved" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [37601 37619]))                  )
+                (reparse-symbol extern-c-contents) [37033 37622])
+            ("RL_ISSTATE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36991 37001])
+            ("RL_UNSETSTATE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36938 36951])
+            ("RL_SETSTATE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36887 36898])
+            ("RL_STATE_DONE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36827 36840])
+            ("RL_STATE_REDISPLAYING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36754 36775])
+            ("RL_STATE_VICMDONCE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36673 36691])
+            ("RL_STATE_MULTIKEY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36602 36619])
+            ("RL_STATE_VIMOTION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36538 36555])
+            ("RL_STATE_CALLBACK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36467 36484])
+            ("RL_STATE_TTYCSAVED" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36400 36418])
+            ("RL_STATE_INPUTPENDING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36331 36352])
+            ("RL_STATE_UNDOING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36276 36292])
+            ("RL_STATE_SIGHANDLER" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36209 36228])
+            ("RL_STATE_COMPLETING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36148 36167])
+            ("RL_STATE_OVERWRITE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36090 36108])
+            ("RL_STATE_MACRODEF" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [36024 36041])
+            ("RL_STATE_MACROINPUT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35953 35972])
+            ("RL_STATE_NUMERICARG" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35884 35903])
+            ("RL_STATE_SEARCH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35820 35835])
+            ("RL_STATE_NSEARCH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35758 35774])
+            ("RL_STATE_ISEARCH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35692 35708])
+            ("RL_STATE_MOREINPUT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35608 35626])
+            ("RL_STATE_DISPATCHING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35538 35558])
+            ("RL_STATE_METANEXT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35472 35489])
+            ("RL_STATE_READCMD" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35409 35425])
+            ("RL_STATE_TERMPREPPED" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35344 35364])
+            ("RL_STATE_INITIALIZED" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35279 35299])
+            ("RL_STATE_INITIALIZING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35220 35241])
+            ("RL_STATE_NONE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35152 35165])
+            ("MULT_MATCH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35075 35085])
+            ("SINGLE_MATCH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35049 35061])
+            ("NO_MATCH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [35023 35031])
+            ("RL_PROMPT_END_IGNORE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34872 34892])
+            ("RL_PROMPT_START_IGNORE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34834 34856])
+            ("READERR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [34753 34760])
+            ("rl_inhibit_completion" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [34573 34606])
+            ("rl_ignore_completion_duplicates" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [34399 34442])
+            ("rl_completion_mark_symlink_dirs" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [34294 34337])
+            ("rl_sort_completion_matches" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [33664 33702])
+            ("rl_completion_suppress_quote" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [33544 33584])
+            ("rl_completion_found_quote" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [33315 33352])
+            ("rl_completion_quote_character" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [33117 33158])
+            ("rl_completion_suppress_append" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [32959 33000])
+            ("rl_completion_append_character" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [32795 32837])
+            ("rl_completion_query_items" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [32620 32657])
+            ("rl_completion_invoking_key" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [32386 32424])
+            ("rl_completion_type" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [32281 32311])
+            ("rl_attempted_completion_over" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [32078 32118])
+            ("rl_char_is_quoted_p" variable
+               (:type ("rl_linebuf_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [31905 31951])
+            ("rl_filename_dequoting_function" variable
+               (:type ("rl_dequote_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [31688 31745])
+            ("rl_filename_quoting_function" variable
+               (:type ("rl_quote_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [31438 31491])
+            ("rl_filename_quoting_desired" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [31140 31179])
+            ("rl_filename_completion_desired" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [30781 30823])
+            ("rl_completion_display_matches_hook" variable
+               (:type ("rl_compdisp_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [30528 30590])
+            ("rl_symbolic_link_hook" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [30007 30028])
+            ("rl_filename_rewrite_hook" variable
+               (:type ("rl_dequote_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [29880 29931])
+            ("rl_filename_stat_hook" variable
+               (:type ("rl_icppfunc_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [29267 29311])
+            ("rl_directory_rewrite_hook" variable
+               (:type ("rl_icppfunc_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [28838 28886])
+            ("rl_directory_completion_hook" variable
+               (:type ("rl_icppfunc_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [28078 28129])
+            ("rl_special_prefixes" variable
+               (:type "char"
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [27449 27488])
+            ("rl_filename_quote_characters" variable
+               (:type "char"
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [27193 27241])
+            ("rl_basic_quote_characters" variable
+               (:type "char"
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [27067 27112])
+            ("rl_completer_quote_characters" variable
+               (:type "char"
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [26959 27008])
+            ("rl_completion_word_break_hook" variable
+               (:type ("rl_cpvfunc_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [26636 26687])
+            ("rl_completer_word_break_characters" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [26396 26454])
+            ("rl_basic_word_break_characters" variable
+               (:type "char"
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [26179 26229])
+            ("rl_attempted_completion_function" variable
+               (:type ("rl_completion_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [25920 25982])
+            ("rl_ignore_some_completions_function" variable
+               (:type ("rl_compignore_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [25493 25558])
+            ("rl_menu_completion_entry_function" variable
+               (:type ("rl_compentry_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [25052 25114])
+            ("rl_completion_entry_function" variable
+               (:type ("rl_compentry_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [24867 24924])
+            ("rl_change_environment" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [24645 24678])
+            ("rl_catch_sigwinch" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [24512 24541])
+            ("rl_catch_signals" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [24186 24214])
+            ("rl_executing_macro" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [23961 23993])
+            ("rl_num_chars_to_read" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [23871 23903])
+            ("rl_already_prompted" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [23720 23751])
+            ("rl_erase_empty_line" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [23511 23542])
+            ("rl_key_sequence_length" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [23281 23315])
+            ("rl_executing_keyseq" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [23247 23280])
+            ("rl_executing_key" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [23218 23246])
+            ("rl_binding_keymap" variable
+               (:type ("Keymap" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [23184 23216])
+            ("rl_executing_keymap" variable
+               (:type ("Keymap" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [23149 23183])
+            ("rl_deprep_term_function" variable
+               (:type ("rl_voidfunc_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [23075 23121])
+            ("rl_prep_term_function" variable
+               (:type ("rl_vintfunc_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [23030 23074])
+            ("rl_redisplay_function" variable
+               (:type ("rl_voidfunc_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [22984 23028])
+            ("rl_getc_function" variable
+               (:type ("rl_getc_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [22942 22982])
+            ("rl_input_available_hook" variable
+               (:type ("rl_hook_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [22788 22835])
+            ("rl_signal_event_hook" variable
+               (:type ("rl_hook_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [22603 22647])
+            ("rl_event_hook" variable
+               (:type ("rl_hook_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [22486 22523])
+            ("rl_pre_input_hook" variable
+               (:type ("rl_hook_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [22305 22346])
+            ("rl_startup_hook" variable
+               (:type ("rl_hook_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [22095 22134])
+            ("rl_prefer_env_winsize" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [21933 21966])
+            ("rl_outstream" variable
+               (:type ("FILE" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [21723 21749])
+            ("rl_instream" variable
+               (:type ("FILE" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [21697 21722])
+            ("rl_terminal_name" variable
+               (:type "char"
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [21623 21659])
+            ("rl_last_func" variable
+               (:type ("rl_command_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [21543 21582])
+            ("rl_numeric_arg" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [21449 21475])
+            ("rl_explicit_arg" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [21349 21376])
+            ("rl_dispatching" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [21227 21253])
+            ("rl_pending_input" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [21011 21039])
+            ("rl_done" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [20917 20936])
+            ("rl_mark" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [20793 20812])
+            ("rl_end" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [20731 20749])
+            ("rl_point" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [20710 20730])
+            ("rl_line_buffer" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [20642 20670])
+            ("rl_display_prompt" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [20571 20602])
+            ("rl_prompt" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [20397 20420])
+            ("rl_readline_name" variable
+               (:type "char"
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [20237 20273])
+            ("rl_insert_mode" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [20072 20098])
+            ("rl_editing_mode" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [19905 19932])
+            ("rl_readline_state" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [19774 19803])
+            ("rl_gnu_readline_p" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [19684 19713])
+            ("rl_readline_version" variable
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [19589 19620])
+            ("rl_library_version" variable
+               (:type "char"
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [19531 19569])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_completion_mode" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18620 18669])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_filename_completion_function" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18547 18607])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_username_completion_function" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18473 18533])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_completion_matches" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18391 18459])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_display_match_list" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18325 18375])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_complete_internal" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18277 18312])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_maybe_replace_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18199 18236])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_maybe_unsave_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18151 18187])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_maybe_save_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18105 18139])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_clear_history" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18040 18072])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_set_paren_blink_timeout" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17948 17989])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_echo_signal_char" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17900 17934])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_free_line_state" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17852 17886])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_reset_after_signal" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17802 17839])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_cleanup_after_signal" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17750 17789])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_clear_signals" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17705 17737])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_set_signals" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17663 17693])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_free" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17578 17603])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_alphabetic" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17537 17565])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_ding" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17502 17525])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_extend_line_buffer" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17454 17490])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_set_keyboard_input_timeout" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17361 17405])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_getc" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17324 17349])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_read_key" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17285 17312])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_clear_pending_input" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17235 17273])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_execute_next" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17193 17223])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_stuff_char" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17153 17181])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_get_termcap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17065 17103])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_reset_screen_size" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17014 17050])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_get_screen_size" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16959 17001])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_set_screen_size" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16908 16946])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_resize_terminal" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16861 16895])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_reset_terminal" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16807 16848])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_tty_unset_default_bindings" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16747 16794])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_tty_set_default_bindings" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16689 16734])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_deprep_terminal" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16642 16676])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_prep_terminal" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16598 16629])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_copy_text" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16512 16544])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_kill_text" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16466 16498])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_delete_text" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16420 16454])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_insert_text" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16370 16408])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_replace_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16314 16358])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_restore_prompt" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16245 16278])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_save_prompt" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16202 16232])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_character_len" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16090 16126])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_show_char" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16012 16039])
+            ("rl_message" function
+               (:type "int"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15967 15992])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_crlf" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15796 15819])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_reset_line_state" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15749 15784])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_clear_message" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15705 15737])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_forced_update_display" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15653 15693])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_on_new_line_with_prompt" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15599 15641])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_on_new_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15557 15587])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_redisplay" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15517 15545])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_modifying" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15440 15472])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_end_undo_group" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15395 15428])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_begin_undo_group" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15348 15383])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_do_undo" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15310 15336])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_free_undo_list" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15265 15298])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_add_undo" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15197 15252])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_push_macro_input" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15105 15142])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_initialize_funmap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15001 15037])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_funmap_names" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14841 14872])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_add_funmap_entry" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14756 14820])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_get_keymap_name_from_edit_mode" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14610 14659])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_set_keymap_from_edit_mode" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14552 14596])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_get_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14468 14497])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_set_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14422 14453])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_get_keymap_name" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14373 14409])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_get_keymap_by_name" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14314 14359])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_free_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14266 14298])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_discard_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14218 14253])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_make_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14175 14205])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_copy_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14128 14160])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_make_bare_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14078 14113])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_parse_and_bind" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13985 14020])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_read_init_file" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13932 13973])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_variable_dumper" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13886 13919])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_macro_dumper" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13843 13873])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_function_dumper" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13797 13830])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_invoking_keyseqs" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13732 13782])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_invoking_keyseqs_in_map" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13652 13717])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_list_funmap_names" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13601 13637])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_function_of_keyseq" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13527 13587])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_named_function" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13459 13500])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_untranslate_keyseq" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13395 13431])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_translate_keyseq" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13323 13381])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_macro_bind" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13178 13237])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_set_key" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13042 13105])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_variable_bind" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12909 12963])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_variable_value" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12856 12897])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_generic_bind" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12781 12841])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_bind_keyseq_if_unbound_in_map" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12684 12769])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_bind_keyseq_if_unbound" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12602 12672])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_bind_keyseq_in_map" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12516 12590])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_bind_keyseq" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12445 12504])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_unbind_command_in_map" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12377 12433])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_unbind_function_in_map" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12301 12365])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_bind_key_if_unbound_in_map" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12216 12289])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_bind_key_if_unbound" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12146 12204])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_unbind_key_in_map" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12091 12134])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_unbind_key" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12051 12079])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_bind_key_in_map" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11977 12039])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_bind_key" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11918 11965])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_add_defun" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11844 11906])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_discard_argument" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11737 11772])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_initialize" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11656 11685])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_expand_prompt" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11609 11643])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_set_prompt" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11560 11597])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("readline" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11515 11547])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_eword" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11152 11183])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_bword" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11109 11140])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_fword" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11066 11097])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_eWord" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11023 11054])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_bWord" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10980 11011])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_fWord" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10937 10968])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_start_inserting" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10811 10857])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_bracktype" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10767 10797])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_domove" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10721 10755])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_check" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10682 10709])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_goto_mark" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10601 10636])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_set_mark" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10555 10589])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_replace" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10510 10543])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_overstrike_delete" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10455 10498])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_overstrike" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10407 10443])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_subst" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10364 10395])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_change_char" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10315 10352])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_match" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10272 10303])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_char_search" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10223 10260])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_first_print" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10174 10211])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_back_to_indent" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10122 10162])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_delete" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10078 10110])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_rubout" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10034 10066])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_yank_to" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9989 10022])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_change_to" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9942 9977])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_delete_to" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9895 9930])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_column" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9851 9883])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_put" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9810 9839])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_change_case" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9761 9798])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_arg_digit" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9714 9749])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_movement_mode" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9663 9702])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_insert_mode" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9614 9651])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_insertion_mode" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9562 9602])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_eof_maybe" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9515 9550])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_append_eol" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9467 9503])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_append_mode" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9418 9455])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_insert_beg" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9370 9406])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_end_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9324 9358])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_next_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9277 9312])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_prev_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9230 9265])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_tilde_expand" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9180 9218])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_complete" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9134 9168])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_search" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9090 9122])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_search_again" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9040 9078])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_fetch_history" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8989 9028])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_yank_arg" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8943 8977])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_undo" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8901 8931])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_redo" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8859 8889])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_callback_handler_remove" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8692 8734])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_callback_read_char" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8642 8679])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_callback_handler_install" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8562 8629])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_insert_close" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8455 8490])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_noninc_reverse_search_again" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8321 8371])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_noninc_forward_search_again" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8259 8309])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_noninc_reverse_search" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8203 8247])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_noninc_forward_search" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8147 8191])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_history_substr_search_backward" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8082 8135])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_history_substr_search_forward" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8018 8070])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_history_search_backward" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7960 8006])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_history_search_forward" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7903 7948])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_tty_status" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7778 7811])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_abort" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7738 7766])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_stop_output" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7652 7686])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_restart_output" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7603 7640])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_tilde_expand" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7513 7548])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_undo_command" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7424 7459])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_revert_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7378 7412])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_print_last_kbd_macro" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7292 7335])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_call_last_kbd_macro" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7238 7280])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_end_kbd_macro" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7190 7226])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_start_kbd_macro" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7140 7178])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_forward_search_history" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7042 7087])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_reverse_search_history" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6985 7030])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_yank_last_arg" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6755 6791])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_yank_nth_arg" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6708 6743])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_yank_pop" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6665 6696])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_yank" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6626 6653])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_copy_backward_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6573 6614])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_copy_forward_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6521 6561])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_kill_region" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6475 6509])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_copy_region_to_kill" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6421 6463])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_unix_line_discard" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6369 6409])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_unix_filename_rubout" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6314 6357])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_unix_word_rubout" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6263 6302])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_kill_full_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6214 6251])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_backward_kill_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6161 6202])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_kill_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6117 6149])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_backward_kill_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6064 6105])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_kill_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6020 6052])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_backward_menu_complete" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5880 5925])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_menu_complete" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5832 5868])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_old_menu_complete" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5780 5820])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_insert_completions" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5727 5768])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_possible_completions" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5672 5715])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_complete" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5629 5660])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_dump_variables" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5534 5571])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_dump_macros" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5488 5522])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_dump_functions" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5439 5476])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_re_read_init_file" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5387 5427])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_overwrite_mode" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5286 5323])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_emacs_editing_mode" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5160 5201])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_vi_editing_mode" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5110 5148])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_exchange_point_and_mark" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4988 5034])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_set_mark" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4945 4976])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_get_previous_history" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4831 4874])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_get_next_history" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4780 4819])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_end_of_history" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4731 4768])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_beginning_of_history" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4676 4719])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_backward_char_search" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4547 4590])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_char_search" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4501 4535])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_transpose_chars" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4397 4435])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_transpose_words" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4347 4385])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_capitalize_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4234 4272])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_downcase_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4186 4222])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_upcase_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4140 4174])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_insert_comment" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4047 4084])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_delete_or_show_completions" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3986 4035])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_delete_horizontal_space" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3928 3974])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_rubout_or_delete" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3877 3916])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_delete" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3836 3865])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_rubout" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3795 3824])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_do_lowercase_version" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3740 3783])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_newline" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3698 3728])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_tab_insert" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3653 3686])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_quoted_insert" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3605 3641])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_insert" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3564 3593])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_arrow_keys" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3461 3494])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_skip_csi_sequence" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3409 3449])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_clear_screen" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3362 3397])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_refresh_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3315 3350])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_backward_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3267 3303])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_forward_word" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3220 3255])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_end_of_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3174 3208])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_beg_of_line" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3128 3162])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_backward" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3085 3116])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_backward_char" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3037 3073])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_backward_byte" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2989 3025])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_forward" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2947 2977])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_forward_char" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2900 2935])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_forward_byte" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2853 2888])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_universal_argument" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2752 2793])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_digit_argument" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2703 2740])
+            ("funmap" variable
+               (:type ("FUNMAP" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 2)
+                (reparse-symbol extern-c-contents) [2383 2406])
+            ("FUNMAP" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("_funmap" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [2296 2381])
+            ("_funmap" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [2323 2340])
+                    ("function" variable
+                       (:pointer 1
+                        :type ("rl_command_func_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2343 2371]))                  )
+                (reparse-symbol extern-c-contents) [2296 2381])
+            ("rl_undo_list" variable
+               (:type ("UNDO_LIST" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [2193 2224])
+            ("UNDO_LIST" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("undo_list" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [1903 2143])
+            ("undo_list" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("undo_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1932 1955])
+                    ("start" variable (:type "int") (reparse-symbol classsubparts) [1958 1973])
+                    ("end" variable (:type "int") (reparse-symbol classsubparts) [1958 1973])
+                    ("text" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2012 2023])
+                    ("what" variable (:type ("undo_code" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [2075 2095]))                  )
+                (reparse-symbol extern-c-contents) [1903 2143])
+            ("undo_code" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("UNDO_DELETE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1801 1813])
+                    ("UNDO_INSERT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1814 1826])
+                    ("UNDO_BEGIN" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1827 1838])
+                    ("UNDO_END" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1839 1849]))                  )
+                (reparse-symbol extern-c-contents) [1784 1850])
+            ("RL_VERSION_MINOR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1408 1424])
+            ("RL_VERSION_MAJOR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1381 1397])
+            ("RL_READLINE_VERSION" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1326 1345])
+            ("readline/tilde.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1237 1266])
+            ("readline/keymaps.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1205 1236])
+            ("readline/rltypedefs.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1170 1204])
+            ("readline/rlstdc.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1139 1169]))          
+      :file "readline.h"
+      :pointmax 37803
+      :fsize 37802
+      :lastmodtime '(22011 51003 0 0)
+      :unmatched-syntax '((semantic-list 37719 . 37744) (INT 37691 . 37694) (EXTERN 37684 . 37690) (semantic-list 37656 . 37681) (INT 37631 . 37634) (EXTERN 37624 . 37630) (semantic-list 18646 . 18667) (INT 18616 . 18619) (EXTERN 18609 . 18615) (semantic-list 18586 . 18605) (punctuation 18546 . 18547) (CHAR 18541 . 18545) (EXTERN 18534 . 18540) (semantic-list 18512 . 18531) (punctuation 18472 . 18473) (CHAR 18467 . 18471) (EXTERN 18460 . 18466) (semantic-list 18420 . 18457) (punctuation 18390 . 18391) (punctuation 18389 . 18390) (CHAR 18384 . 18388) (EXTERN 18377 . 18383) (semantic-list 18354 . 18373) (VOID 18320 . 18324) (EXTERN 18313 . 18319) (semantic-list 18305 . 18310) (INT 18273 . 18276) (EXTERN 18266 . 18272) (semantic-list 18228 . 18234) (INT 18195 . 18198) (EXTERN 18188 . 18194) (semantic-list 18179 . 18185) (INT 18147 . 18150) (EXTERN 18140 . 18146) (semantic-list 18131 . 18137) (INT 18101 . 18104) (EXTERN 18094 . 18100) (semantic-list 18064 . 18070) (VOID 18035 . 18039) (EXTERN 18028 . 18034) (semantic-list 17982 . 17987) (INT 17944 . 17947) (EXTERN 17937 . 17943) (semantic-list 17927 . 17932) (VOID 17895 . 17899) (EXTERN 17888 . 17894) (semantic-list 17878 . 17884) (VOID 17847 . 17851) (EXTERN 17840 . 17846) (semantic-list 17831 . 17837) (VOID 17797 . 17801) (EXTERN 17790 . 17796) (semantic-list 17781 . 17787) (VOID 17745 . 17749) (EXTERN 17738 . 17744) (semantic-list 17729 . 17735) (INT 17701 . 17704) (EXTERN 17694 . 17700) (semantic-list 17685 . 17691) (INT 17659 . 17662) (EXTERN 17652 . 17658) (semantic-list 17593 . 17601) (VOID 17573 . 17577) (EXTERN 17566 . 17572) (semantic-list 17558 . 17563) (INT 17533 . 17536) (EXTERN 17526 . 17532) (semantic-list 17517 . 17523) (INT 17498 . 17501) (EXTERN 17491 . 17497) (semantic-list 17483 . 17488) (VOID 17449 . 17453) (EXTERN 17442 . 17448) (semantic-list 17398 . 17403) (INT 17357 . 17360) (EXTERN 17350 . 17356) (semantic-list 17339 . 17347) (INT 17320 . 17323) (EXTERN 17313 . 17319) (semantic-list 17304 . 17310) (INT 17281 . 17284) (EXTERN 17274 . 17280) (semantic-list 17265 . 17271) (INT 17231 . 17234) (EXTERN 17224 . 17230) (semantic-list 17216 . 17221) (INT 17189 . 17192) (EXTERN 17182 . 17188) (semantic-list 17174 . 17179) (INT 17149 . 17152) (EXTERN 17142 . 17148) (semantic-list 17087 . 17101) (punctuation 17064 . 17065) (CHAR 17059 . 17063) (EXTERN 17052 . 17058) (semantic-list 17042 . 17048) (VOID 17009 . 17013) (EXTERN 17002 . 17008) (semantic-list 16985 . 16999) (VOID 16954 . 16958) (EXTERN 16947 . 16953) (semantic-list 16934 . 16944) (VOID 16903 . 16907) (EXTERN 16896 . 16902) (semantic-list 16887 . 16893) (VOID 16856 . 16860) (EXTERN 16849 . 16855) (semantic-list 16832 . 16846) (INT 16803 . 16806) (EXTERN 16796 . 16802) (semantic-list 16784 . 16792) (VOID 16742 . 16746) (EXTERN 16735 . 16741) (semantic-list 16724 . 16732) (VOID 16684 . 16688) (EXTERN 16677 . 16683) (semantic-list 16668 . 16674) (VOID 16637 . 16641) (EXTERN 16630 . 16636) (semantic-list 16622 . 16627) (VOID 16593 . 16597) (EXTERN 16586 . 16592) (semantic-list 16532 . 16542) (punctuation 16511 . 16512) (CHAR 16506 . 16510) (EXTERN 16499 . 16505) (semantic-list 16486 . 16496) (INT 16462 . 16465) (EXTERN 16455 . 16461) (semantic-list 16442 . 16452) (INT 16416 . 16419) (EXTERN 16409 . 16415) (semantic-list 16392 . 16406) (INT 16366 . 16369) (EXTERN 16359 . 16365) (semantic-list 16337 . 16356) (VOID 16309 . 16313) (EXTERN 16302 . 16308) (semantic-list 16270 . 16276) (VOID 16240 . 16244) (EXTERN 16233 . 16239) (semantic-list 16224 . 16230) (VOID 16197 . 16201) (EXTERN 16190 . 16196) (semantic-list 16114 . 16124) (INT 16086 . 16089) (EXTERN 16079 . 16085) (semantic-list 16032 . 16037) (INT 16008 . 16011) (EXTERN 16001 . 16007) (semantic-list 15811 . 15817) (INT 15792 . 15795) (EXTERN 15785 . 15791) (semantic-list 15776 . 15782) (INT 15745 . 15748) (EXTERN 15738 . 15744) (semantic-list 15729 . 15735) (INT 15701 . 15704) (EXTERN 15694 . 15700) (semantic-list 15685 . 15691) (INT 15649 . 15652) (EXTERN 15642 . 15648) (semantic-list 15633 . 15639) (INT 15595 . 15598) (EXTERN 15588 . 15594) (semantic-list 15579 . 15585) (INT 15553 . 15556) (EXTERN 15546 . 15552) (semantic-list 15537 . 15543) (VOID 15512 . 15516) (EXTERN 15505 . 15511) (semantic-list 15460 . 15470) (INT 15436 . 15439) (EXTERN 15429 . 15435) (semantic-list 15420 . 15426) (INT 15391 . 15394) (EXTERN 15384 . 15390) (semantic-list 15375 . 15381) (INT 15344 . 15347) (EXTERN 15337 . 15343) (semantic-list 15328 . 15334) (INT 15306 . 15309) (EXTERN 15299 . 15305) (semantic-list 15290 . 15296) (VOID 15260 . 15264) (EXTERN 15253 . 15259) (semantic-list 15216 . 15250) (VOID 15192 . 15196) (EXTERN 15185 . 15191) (semantic-list 15132 . 15140) (VOID 15100 . 15104) (EXTERN 15093 . 15099) (semantic-list 15029 . 15035) (VOID 14996 . 15000) (EXTERN 14989 . 14995) (semantic-list 14864 . 14870) (punctuation 14840 . 14841) (punctuation 14839 . 14840) (CHAR 14834 . 14838) (CONST 14828 . 14833) (EXTERN 14821 . 14827) (semantic-list 14783 . 14818) (INT 14752 . 14755) (EXTERN 14745 . 14751) (semantic-list 14651 . 14657) (punctuation 14609 . 14610) (CHAR 14604 . 14608) (EXTERN 14597 . 14603) (semantic-list 14588 . 14594) (VOID 14547 . 14551) (EXTERN 14540 . 14546) (semantic-list 14489 . 14495) (symbol 14461 . 14467) (EXTERN 14454 . 14460) (semantic-list 14443 . 14451) (VOID 14417 . 14421) (EXTERN 14410 . 14416) (semantic-list 14399 . 14407) (punctuation 14372 . 14373) (CHAR 14367 . 14371) (EXTERN 14360 . 14366) (semantic-list 14343 . 14357) (symbol 14307 . 14313) (EXTERN 14300 . 14306) (semantic-list 14288 . 14296) (VOID 14261 . 14265) (EXTERN 14254 . 14260) (semantic-list 14243 . 14251) (VOID 14213 . 14217) (EXTERN 14206 . 14212) (semantic-list 14197 . 14203) (symbol 14168 . 14174) (EXTERN 14161 . 14167) (semantic-list 14150 . 14158) (symbol 14121 . 14127) (EXTERN 14114 . 14120) (semantic-list 14105 . 14111) (symbol 14071 . 14077) (EXTERN 14064 . 14070) (semantic-list 14010 . 14018) (INT 13981 . 13984) (EXTERN 13974 . 13980) (semantic-list 13957 . 13971) (INT 13928 . 13931) (EXTERN 13921 . 13927) (semantic-list 13912 . 13917) (VOID 13881 . 13885) (EXTERN 13874 . 13880) (semantic-list 13866 . 13871) (VOID 13838 . 13842) (EXTERN 13831 . 13837) (semantic-list 13823 . 13828) (VOID 13792 . 13796) (EXTERN 13785 . 13791) (semantic-list 13759 . 13780) (punctuation 13731 . 13732) (punctuation 13730 . 13731) (CHAR 13725 . 13729) (EXTERN 13718 . 13724) (semantic-list 13686 . 13715) (punctuation 13651 . 13652) (punctuation 13650 . 13651) (CHAR 13645 . 13649) (EXTERN 13638 . 13644) (semantic-list 13629 . 13635) (VOID 13596 . 13600) (EXTERN 13589 . 13595) (semantic-list 13556 . 13585) (punctuation 13526 . 13527) (symbol 13508 . 13525) (EXTERN 13501 . 13507) (semantic-list 13484 . 13498) (punctuation 13458 . 13459) (symbol 13440 . 13457) (EXTERN 13433 . 13439) (semantic-list 13424 . 13429) (punctuation 13394 . 13395) (CHAR 13389 . 13393) (EXTERN 13382 . 13388) (semantic-list 13350 . 13379) (INT 13319 . 13322) (EXTERN 13312 . 13318) (semantic-list 13199 . 13235) (INT 13174 . 13177) (EXTERN 13167 . 13173) (semantic-list 13060 . 13103) (INT 13038 . 13041) (EXTERN 13031 . 13037) (semantic-list 12933 . 12961) (INT 12905 . 12908) (EXTERN 12898 . 12904) (semantic-list 12881 . 12895) (punctuation 12855 . 12856) (CHAR 12850 . 12854) (EXTERN 12843 . 12849) (semantic-list 12804 . 12839) (INT 12777 . 12780) (EXTERN 12770 . 12776) (semantic-list 12724 . 12767) (INT 12680 . 12683) (EXTERN 12673 . 12679) (semantic-list 12635 . 12670) (INT 12598 . 12601) (EXTERN 12591 . 12597) (semantic-list 12545 . 12588) (INT 12512 . 12515) (EXTERN 12505 . 12511) (semantic-list 12467 . 12502) (INT 12441 . 12444) (EXTERN 12434 . 12440) (semantic-list 12409 . 12431) (INT 12373 . 12376) (EXTERN 12366 . 12372) (semantic-list 12334 . 12363) (INT 12297 . 12300) (EXTERN 12290 . 12296) (semantic-list 12253 . 12287) (INT 12212 . 12215) (EXTERN 12205 . 12211) (semantic-list 12176 . 12202) (INT 12142 . 12145) (EXTERN 12135 . 12141) (semantic-list 12119 . 12132) (INT 12087 . 12090) (EXTERN 12080 . 12086) (semantic-list 12072 . 12077) (INT 12047 . 12050) (EXTERN 12040 . 12046) (semantic-list 12003 . 12037) (INT 11973 . 11976) (EXTERN 11966 . 11972) (semantic-list 11937 . 11963) (INT 11914 . 11917) (EXTERN 11907 . 11913) (semantic-list 11864 . 11904) (INT 11840 . 11843) (EXTERN 11833 . 11839) (semantic-list 11764 . 11770) (INT 11733 . 11736) (EXTERN 11726 . 11732) (semantic-list 11677 . 11683) (INT 11652 . 11655) (EXTERN 11645 . 11651) (semantic-list 11633 . 11641) (INT 11605 . 11608) (EXTERN 11598 . 11604) (semantic-list 11581 . 11595) (INT 11556 . 11559) (EXTERN 11549 . 11555) (semantic-list 11531 . 11545) (punctuation 11514 . 11515) (CHAR 11509 . 11513) (EXTERN 11502 . 11508) (semantic-list 11171 . 11181) (INT 11148 . 11151) (EXTERN 11141 . 11147) (semantic-list 11128 . 11138) (INT 11105 . 11108) (EXTERN 11098 . 11104) (semantic-list 11085 . 11095) (INT 11062 . 11065) (EXTERN 11055 . 11061) (semantic-list 11042 . 11052) (INT 11019 . 11022) (EXTERN 11012 . 11018) (semantic-list 10999 . 11009) (INT 10976 . 10979) (EXTERN 10969 . 10975) (semantic-list 10956 . 10966) (INT 10933 . 10936) (EXTERN 10926 . 10932) (semantic-list 10840 . 10855) (VOID 10806 . 10810) (EXTERN 10799 . 10805) (semantic-list 10790 . 10795) (INT 10763 . 10766) (EXTERN 10756 . 10762) (semantic-list 10741 . 10753) (INT 10717 . 10720) (EXTERN 10710 . 10716) (semantic-list 10701 . 10707) (INT 10678 . 10681) (EXTERN 10671 . 10677) (semantic-list 10624 . 10634) (INT 10597 . 10600) (EXTERN 10590 . 10596) (semantic-list 10577 . 10587) (INT 10551 . 10554) (EXTERN 10544 . 10550) (semantic-list 10531 . 10541) (INT 10506 . 10509) (EXTERN 10499 . 10505) (semantic-list 10486 . 10496) (INT 10451 . 10454) (EXTERN 10444 . 10450) (semantic-list 10431 . 10441) (INT 10403 . 10406) (EXTERN 10396 . 10402) (semantic-list 10383 . 10393) (INT 10360 . 10363) (EXTERN 10353 . 10359) (semantic-list 10340 . 10350) (INT 10311 . 10314) (EXTERN 10304 . 10310) (semantic-list 10291 . 10301) (INT 10268 . 10271) (EXTERN 10261 . 10267) (semantic-list 10248 . 10258) (INT 10219 . 10222) (EXTERN 10212 . 10218) (semantic-list 10199 . 10209) (INT 10170 . 10173) (EXTERN 10163 . 10169) (semantic-list 10150 . 10160) (INT 10118 . 10121) (EXTERN 10111 . 10117) (semantic-list 10098 . 10108) (INT 10074 . 10077) (EXTERN 10067 . 10073) (semantic-list 10054 . 10064) (INT 10030 . 10033) (EXTERN 10023 . 10029) (semantic-list 10010 . 10020) (INT 9985 . 9988) (EXTERN 9978 . 9984) (semantic-list 9965 . 9975) (INT 9938 . 9941) (EXTERN 9931 . 9937) (semantic-list 9918 . 9928) (INT 9891 . 9894) (EXTERN 9884 . 9890) (semantic-list 9871 . 9881) (INT 9847 . 9850) (EXTERN 9840 . 9846) (semantic-list 9827 . 9837) (INT 9806 . 9809) (EXTERN 9799 . 9805) (semantic-list 9786 . 9796) (INT 9757 . 9760) (EXTERN 9750 . 9756) (semantic-list 9737 . 9747) (INT 9710 . 9713) (EXTERN 9703 . 9709) (semantic-list 9690 . 9700) (INT 9659 . 9662) (EXTERN 9652 . 9658) (semantic-list 9639 . 9649) (INT 9610 . 9613) (EXTERN 9603 . 9609) (semantic-list 9590 . 9600) (INT 9558 . 9561) (EXTERN 9551 . 9557) (semantic-list 9538 . 9548) (INT 9511 . 9514) (EXTERN 9504 . 9510) (semantic-list 9491 . 9501) (INT 9463 . 9466) (EXTERN 9456 . 9462) (semantic-list 9443 . 9453) (INT 9414 . 9417) (EXTERN 9407 . 9413) (semantic-list 9394 . 9404) (INT 9366 . 9369) (EXTERN 9359 . 9365) (semantic-list 9346 . 9356) (INT 9320 . 9323) (EXTERN 9313 . 9319) (semantic-list 9300 . 9310) (INT 9273 . 9276) (EXTERN 9266 . 9272) (semantic-list 9253 . 9263) (INT 9226 . 9229) (EXTERN 9219 . 9225) (semantic-list 9206 . 9216) (INT 9176 . 9179) (EXTERN 9169 . 9175) (semantic-list 9156 . 9166) (INT 9130 . 9133) (EXTERN 9123 . 9129) (semantic-list 9110 . 9120) (INT 9086 . 9089) (EXTERN 9079 . 9085) (semantic-list 9066 . 9076) (INT 9036 . 9039) (EXTERN 9029 . 9035) (semantic-list 9016 . 9026) (INT 8985 . 8988) (EXTERN 8978 . 8984) (semantic-list 8965 . 8975) (INT 8939 . 8942) (EXTERN 8932 . 8938) (semantic-list 8919 . 8929) (INT 8897 . 8900) (EXTERN 8890 . 8896) (semantic-list 8877 . 8887) (INT 8855 . 8858) (EXTERN 8848 . 8854) (semantic-list 8726 . 8732) (VOID 8687 . 8691) (EXTERN 8680 . 8686) (semantic-list 8671 . 8677) (VOID 8637 . 8641) (EXTERN 8630 . 8636) (semantic-list 8597 . 8627) (VOID 8557 . 8561) (EXTERN 8550 . 8556) (semantic-list 8478 . 8488) (INT 8451 . 8454) (EXTERN 8444 . 8450) (semantic-list 8359 . 8369) (INT 8317 . 8320) (EXTERN 8310 . 8316) (semantic-list 8297 . 8307) (INT 8255 . 8258) (EXTERN 8248 . 8254) (semantic-list 8235 . 8245) (INT 8199 . 8202) (EXTERN 8192 . 8198) (semantic-list 8179 . 8189) (INT 8143 . 8146) (EXTERN 8136 . 8142) (semantic-list 8123 . 8133) (INT 8078 . 8081) (EXTERN 8071 . 8077) (semantic-list 8058 . 8068) (INT 8014 . 8017) (EXTERN 8007 . 8013) (semantic-list 7994 . 8004) (INT 7956 . 7959) (EXTERN 7949 . 7955) (semantic-list 7936 . 7946) (INT 7899 . 7902) (EXTERN 7892 . 7898) (semantic-list 7799 . 7809) (INT 7774 . 7777) (EXTERN 7767 . 7773) (semantic-list 7754 . 7764) (INT 7734 . 7737) (EXTERN 7727 . 7733) (semantic-list 7674 . 7684) (INT 7648 . 7651) (EXTERN 7641 . 7647) (semantic-list 7628 . 7638) (INT 7599 . 7602) (EXTERN 7592 . 7598) (semantic-list 7536 . 7546) (INT 7509 . 7512) (EXTERN 7502 . 7508) (semantic-list 7447 . 7457) (INT 7420 . 7423) (EXTERN 7413 . 7419) (semantic-list 7400 . 7410) (INT 7374 . 7377) (EXTERN 7367 . 7373) (semantic-list 7323 . 7333) (INT 7288 . 7291) (EXTERN 7281 . 7287) (semantic-list 7268 . 7278) (INT 7234 . 7237) (EXTERN 7227 . 7233) (semantic-list 7214 . 7224) (INT 7186 . 7189) (EXTERN 7179 . 7185) (semantic-list 7166 . 7176) (INT 7136 . 7139) (EXTERN 7129 . 7135) (semantic-list 7075 . 7085) (INT 7038 . 7041) (EXTERN 7031 . 7037) (semantic-list 7018 . 7028) (INT 6981 . 6984) (EXTERN 6974 . 6980) (semantic-list 6779 . 6789) (INT 6751 . 6754) (EXTERN 6744 . 6750) (semantic-list 6731 . 6741) (INT 6704 . 6707) (EXTERN 6697 . 6703) (semantic-list 6684 . 6694) (INT 6661 . 6664) (EXTERN 6654 . 6660) (semantic-list 6641 . 6651) (INT 6622 . 6625) (EXTERN 6615 . 6621) (semantic-list 6602 . 6612) (INT 6569 . 6572) (EXTERN 6562 . 6568) (semantic-list 6549 . 6559) (INT 6517 . 6520) (EXTERN 6510 . 6516) (semantic-list 6497 . 6507) (INT 6471 . 6474) (EXTERN 6464 . 6470) (semantic-list 6451 . 6461) (INT 6417 . 6420) (EXTERN 6410 . 6416) (semantic-list 6397 . 6407) (INT 6365 . 6368) (EXTERN 6358 . 6364) (semantic-list 6345 . 6355) (INT 6310 . 6313) (EXTERN 6303 . 6309) (semantic-list 6290 . 6300) (INT 6259 . 6262) (EXTERN 6252 . 6258) (semantic-list 6239 . 6249) (INT 6210 . 6213) (EXTERN 6203 . 6209) (semantic-list 6190 . 6200) (INT 6157 . 6160) (EXTERN 6150 . 6156) (semantic-list 6137 . 6147) (INT 6113 . 6116) (EXTERN 6106 . 6112) (semantic-list 6093 . 6103) (INT 6060 . 6063) (EXTERN 6053 . 6059) (semantic-list 6040 . 6050) (INT 6016 . 6019) (EXTERN 6009 . 6015) (semantic-list 5913 . 5923) (INT 5876 . 5879) (EXTERN 5869 . 5875) (semantic-list 5856 . 5866) (INT 5828 . 5831) (EXTERN 5821 . 5827) (semantic-list 5808 . 5818) (INT 5776 . 5779) (EXTERN 5769 . 5775) (semantic-list 5756 . 5766) (INT 5723 . 5726) (EXTERN 5716 . 5722) (semantic-list 5703 . 5713) (INT 5668 . 5671) (EXTERN 5661 . 5667) (semantic-list 5648 . 5658) (INT 5625 . 5628) (EXTERN 5618 . 5624) (semantic-list 5559 . 5569) (INT 5530 . 5533) (EXTERN 5523 . 5529) (semantic-list 5510 . 5520) (INT 5484 . 5487) (EXTERN 5477 . 5483) (semantic-list 5464 . 5474) (INT 5435 . 5438) (EXTERN 5428 . 5434) (semantic-list 5415 . 5425) (INT 5383 . 5386) (EXTERN 5376 . 5382) (semantic-list 5311 . 5321) (INT 5282 . 5285) (EXTERN 5275 . 5281) (semantic-list 5189 . 5199) (INT 5156 . 5159) (EXTERN 5149 . 5155) (semantic-list 5136 . 5146) (INT 5106 . 5109) (EXTERN 5099 . 5105) (semantic-list 5022 . 5032) (INT 4984 . 4987) (EXTERN 4977 . 4983) (semantic-list 4964 . 4974) (INT 4941 . 4944) (EXTERN 4934 . 4940) (semantic-list 4862 . 4872) (INT 4827 . 4830) (EXTERN 4820 . 4826) (semantic-list 4807 . 4817) (INT 4776 . 4779) (EXTERN 4769 . 4775) (semantic-list 4756 . 4766) (INT 4727 . 4730) (EXTERN 4720 . 4726) (semantic-list 4707 . 4717) (INT 4672 . 4675) (EXTERN 4665 . 4671) (semantic-list 4578 . 4588) (INT 4543 . 4546) (EXTERN 4536 . 4542) (semantic-list 4523 . 4533) (INT 4497 . 4500) (EXTERN 4490 . 4496) (semantic-list 4423 . 4433) (INT 4393 . 4396) (EXTERN 4386 . 4392) (semantic-list 4373 . 4383) (INT 4343 . 4346) (EXTERN 4336 . 4342) (semantic-list 4260 . 4270) (INT 4230 . 4233) (EXTERN 4223 . 4229) (semantic-list 4210 . 4220) (INT 4182 . 4185) (EXTERN 4175 . 4181) (semantic-list 4162 . 4172) (INT 4136 . 4139) (EXTERN 4129 . 4135) (semantic-list 4072 . 4082) (INT 4043 . 4046) (EXTERN 4036 . 4042) (semantic-list 4023 . 4033) (INT 3982 . 3985) (EXTERN 3975 . 3981) (semantic-list 3962 . 3972) (INT 3924 . 3927) (EXTERN 3917 . 3923) (semantic-list 3904 . 3914) (INT 3873 . 3876) (EXTERN 3866 . 3872) (semantic-list 3853 . 3863) (INT 3832 . 3835) (EXTERN 3825 . 3831) (semantic-list 3812 . 3822) (INT 3791 . 3794) (EXTERN 3784 . 3790) (semantic-list 3771 . 3781) (INT 3736 . 3739) (EXTERN 3729 . 3735) (semantic-list 3716 . 3726) (INT 3694 . 3697) (EXTERN 3687 . 3693) (semantic-list 3674 . 3684) (INT 3649 . 3652) (EXTERN 3642 . 3648) (semantic-list 3629 . 3639) (INT 3601 . 3604) (EXTERN 3594 . 3600) (semantic-list 3581 . 3591) (INT 3560 . 3563) (EXTERN 3553 . 3559) (semantic-list 3482 . 3492) (INT 3457 . 3460) (EXTERN 3450 . 3456) (semantic-list 3437 . 3447) (INT 3405 . 3408) (EXTERN 3398 . 3404) (semantic-list 3385 . 3395) (INT 3358 . 3361) (EXTERN 3351 . 3357) (semantic-list 3338 . 3348) (INT 3311 . 3314) (EXTERN 3304 . 3310) (semantic-list 3291 . 3301) (INT 3263 . 3266) (EXTERN 3256 . 3262) (semantic-list 3243 . 3253) (INT 3216 . 3219) (EXTERN 3209 . 3215) (semantic-list 3196 . 3206) (INT 3170 . 3173) (EXTERN 3163 . 3169) (semantic-list 3150 . 3160) (INT 3124 . 3127) (EXTERN 3117 . 3123) (semantic-list 3104 . 3114) (INT 3081 . 3084) (EXTERN 3074 . 3080) (semantic-list 3061 . 3071) (INT 3033 . 3036) (EXTERN 3026 . 3032) (semantic-list 3013 . 3023) (INT 2985 . 2988) (EXTERN 2978 . 2984) (semantic-list 2965 . 2975) (INT 2943 . 2946) (EXTERN 2936 . 2942) (semantic-list 2923 . 2933) (INT 2896 . 2899) (EXTERN 2889 . 2895) (semantic-list 2876 . 2886) (INT 2849 . 2852) (EXTERN 2842 . 2848) (semantic-list 2781 . 2791) (INT 2748 . 2751) (EXTERN 2741 . 2747) (semantic-list 2728 . 2738) (INT 2699 . 2702) (EXTERN 2692 . 2698))
+      :lexical-table 
+        '(("SINGLE_MATCH" . ((number "1" 35065 . 35066)))
+          ("RL_STATE_METANEXT" . ((number "0x0000010" 35490 . 35499)))
+          ("RL_STATE_SEARCH" . ((number "0x0000200" 35837 . 35846)))
+          ("RL_STATE_INPUTPENDING" . ((number "0x0020000" 36353 . 36362)))
+          ("RL_STATE_TTYCSAVED" . ((number "0x0040000" 36419 . 36428)))
+          ("_READLINE_H_")
+          ("RL_STATE_UNDOING" . ((number "0x0010000" 36293 . 36302)))
+          ("RL_STATE_TERMPREPPED" . ((number "0x0000004" 35365 . 35374)))
+          ("RL_STATE_CALLBACK" . ((number "0x0080000" 36485 . 36494)))
+          ("RL_STATE_REDISPLAYING" . ((number "0x0800000" 36776 . 36785)))
+          ("RL_VERSION_MINOR" . ((number "3" 1425 . 1426)))
+          ("RL_STATE_MACROINPUT" . ((number "0x0000800" 35973 . 35982)))
+          ("RL_ISSTATE" (spp-arg-list ("x") 37001 . 37004) . ((semantic-list "(rl_readline_state & (x))" 37006 . 37031)))
+          ("rl_symbolic_link_hook" . ((symbol "rl_directory_completion_hook" 30029 . 30057)))
+          ("READERR" . ((semantic-list "(-2)" 34763 . 34767)))
+          ("RL_STATE_MOREINPUT" . ((number "0x0000040" 35627 . 35636)))
+          ("RL_STATE_COMPLETING" . ((number "0x0004000" 36168 . 36177)))
+          ("RL_UNSETSTATE" (spp-arg-list ("x") 36951 . 36954) . ((semantic-list "(rl_readline_state &= ~(x))" 36955 . 36982)))
+          ("RL_PROMPT_START_IGNORE" . ((string "'\\001'" 34857 . 34863)))
+          ("RL_PROMPT_END_IGNORE" . ((string "'\\002'" 34893 . 34899)))
+          ("RL_STATE_INITIALIZED" . ((number "0x0000002" 35300 . 35309)))
+          ("MULT_MATCH" . ((number "2" 35091 . 35092)))
+          ("RL_STATE_INITIALIZING" . ((number "0x0000001" 35242 . 35251)))
+          ("RL_STATE_READCMD" . ((number "0x0000008" 35426 . 35435)))
+          ("RL_STATE_SIGHANDLER" . ((number "0x0008000" 36229 . 36238)))
+          ("RL_STATE_VIMOTION" . ((number "0x0100000" 36556 . 36565)))
+          ("RL_SETSTATE" (spp-arg-list ("x") 36898 . 36901) . ((semantic-list "(rl_readline_state |= (x))" 36903 . 36929)))
+          ("RL_STATE_NONE" . ((number "0x000000" 35167 . 35175)))
+          ("RL_STATE_ISEARCH" . ((number "0x0000080" 35709 . 35718)))
+          ("RL_STATE_NUMERICARG" . ((number "0x0000400" 35904 . 35913)))
+          ("RL_STATE_OVERWRITE" . ((number "0x0002000" 36109 . 36118)))
+          ("RL_READLINE_VERSION" . ((number "0x0603" 1346 . 1352)))
+          ("NO_MATCH" . ((number "0" 35039 . 35040)))
+          ("RL_STATE_DISPATCHING" . ((number "0x0000020" 35559 . 35568)))
+          ("RL_STATE_MACRODEF" . ((number "0x0001000" 36042 . 36051)))
+          ("RL_STATE_VICMDONCE" . ((number "0x0400000" 36692 . 36701)))
+          ("RL_STATE_DONE" . ((number "0x1000000" 36842 . 36851)))
+          ("RL_VERSION_MAJOR" . ((number "6" 1398 . 1399)))
+          ("RL_STATE_MULTIKEY" . ((number "0x0200000" 36620 . 36629)))
+          ("RL_STATE_NSEARCH" . ((number "0x0000100" 35775 . 35784)))
+          )
+)
+    (semanticdb-table "tilde.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_TILDE_H_" variable (:constant-flag t) nil [950 959])
+            ("tilde_find_word" function
+               (:type "char"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) nil)
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) nil)
+                    ("" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) nil))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2929 2993])
+            ("tilde_expand_word" function
+               (:type "char"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) nil))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2794 2848])
+            ("tilde_expand" function
+               (:type "char"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) nil))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2597 2646])
+            ("tilde_additional_suffixes" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 2)
+                (reparse-symbol extern-c-contents) [2482 2522])
+            ("tilde_additional_prefixes" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 2)
+                (reparse-symbol extern-c-contents) [2281 2321])
+            ("tilde_expansion_failure_hook" variable
+               (:type ("tilde_hook_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [2072 2127])
+            ("tilde_expansion_preexpansion_hook" variable
+               (:type ("tilde_hook_func_t" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [1715 1775])
+            ("tilde_hook_func_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) nil))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1376 1417])
+            ("PARAMS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1291 1297]))          
+      :file "tilde.h"
+      :pointmax 3047
+      :fsize 3046
+      :lastmodtime '(22011 51003 0 0)
+      :unmatched-syntax '((TYPEDEF 1368 . 1375))
+      :lexical-table 
+        '(("_TILDE_H_")
+          ("PARAMS" (spp-arg-list ("protos") 1297 . 1305) . ((symbol "protos" 1306 . 1312)))
+          )
+)
+    (semanticdb-table "keymaps.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_KEYMAPS_H_" variable (:constant-flag t) nil [934 945])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_set_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3077 3108])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_get_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2997 3026])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_get_keymap_by_name" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2903 2948])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_discard_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2687 2722])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_make_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2594 2624])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_copy_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2347 2379])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rl_make_bare_keymap" type (:type "class") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2246 2281])
+            ("vi_movement_keymap" variable
+               (:type ("KEYMAP_ENTRY_ARRAY" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [2088 2154])
+            ("vi_insertion_keymap" variable
+               (:type ("KEYMAP_ENTRY_ARRAY" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [2088 2154])
+            ("emacs_ctlx_keymap" variable
+               (:type ("KEYMAP_ENTRY_ARRAY" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [2001 2087])
+            ("emacs_meta_keymap" variable
+               (:type ("KEYMAP_ENTRY_ARRAY" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [2001 2087])
+            ("emacs_standard_keymap" variable
+               (:type ("KEYMAP_ENTRY_ARRAY" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [2001 2087])
+            ("ISMACR" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1991 1997])
+            ("ISKMAP" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1974 1980])
+            ("ISFUNC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1957 1963])
+            ("Keymap" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :pointer 1
+                :typedef ("KEYMAP_ENTRY" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [1863 1892])
+            ("KEYMAP_ENTRY_ARRAY" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("KEYMAP_ENTRY" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [1809 1862])
+            ("ANYOTHERKEY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1782 1793])
+            ("KEYMAP_SIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1758 1769])
+            ("KEYMAP_ENTRY" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("_keymap_entry" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [1462 1552])
+            ("_keymap_entry" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("type" variable (:type "char") (reparse-symbol classsubparts) [1495 1505])
+                    ("function" variable
+                       (:pointer 1
+                        :type ("rl_command_func_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1508 1536]))                  )
+                (reparse-symbol extern-c-contents) [1462 1552])
+            ("readline/rltypedefs.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1160 1194])
+            ("readline/chardefs.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1127 1159])
+            ("readline/rlstdc.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [1096 1126]))          
+      :file "keymaps.h"
+      :pointmax 3164
+      :fsize 3163
+      :lastmodtime '(22011 51003 0 0)
+      :unmatched-syntax '((semantic-list 3098 . 3106) (VOID 3072 . 3076) (EXTERN 3065 . 3071) (semantic-list 3018 . 3024) (symbol 2990 . 2996) (EXTERN 2983 . 2989) (semantic-list 2932 . 2946) (symbol 2896 . 2902) (EXTERN 2889 . 2895) (semantic-list 2712 . 2720) (VOID 2682 . 2686) (EXTERN 2675 . 2681) (semantic-list 2616 . 2622) (symbol 2587 . 2593) (EXTERN 2580 . 2586) (semantic-list 2369 . 2377) (symbol 2340 . 2346) (EXTERN 2333 . 2339) (semantic-list 2273 . 2279) (symbol 2239 . 2245) (EXTERN 2232 . 2238))
+      :lexical-table 
+        '(("ANYOTHERKEY" . 
+              ((symbol "KEYMAP_SIZE" 1794 . 1805) (punctuation "-" 1805 . 1806) (number "1" 1806 . 1807)))
+          ("ISFUNC" . ((number "0" 1964 . 1965)))
+          ("KEYMAP_SIZE" . ((number "257" 1770 . 1773)))
+          ("ISMACR" . ((number "2" 1998 . 1999)))
+          ("_KEYMAPS_H_")
+          ("ISKMAP" . ((number "1" 1981 . 1982)))
+          )
+)
+    (semanticdb-table "rltypedefs.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_RL_TYPEDEFS_H_" variable (:constant-flag t) nil [942 957])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((1) "rl_cpcppfunc_t")) type (:superclasses ("char") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3051 3099])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((1) "rl_cpcpfunc_t")) type (:superclasses ("char") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3004 3050])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((1) "rl_cpifunc_t")) type (:superclasses ("char") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2962 3003])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((1) "rl_cpvfunc_t")) type (:superclasses ("char") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2919 2961])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_vcppfunc_t")) type (:superclasses ("void") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2872 2917])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_vcpfunc_t")) type (:superclasses ("void") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2828 2871])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_vintfunc_t")) type (:superclasses ("void") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2786 2827])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_voidfunc_t")) type (:superclasses ("void") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2743 2785])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_icppfunc_t")) type (:superclasses ("int") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2697 2741])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_icpfunc_t")) type (:superclasses ("int") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2654 2696])
+            ("rl_ivoidfunc_t" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2624 2638])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_intfunc_t")) type (:superclasses ("int") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2576 2615])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_linebuf_func_t")) type (:superclasses ("int") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2480 2532])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_getc_func_t")) type (:superclasses ("int") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2266 2310])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_hook_func_t")) type (:superclasses ("int") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2196 2238])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_compdisp_func_t")) type (:superclasses ("void") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2066 2126])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_compignore_func_t")) type (:superclasses ("int") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2013 2064])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((1) "rl_dequote_func_t")) type (:superclasses ("char") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1957 2011])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((1) "rl_quote_func_t")) type (:superclasses ("char") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1896 1956])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((2) "rl_completion_func_t")) type (:superclasses ("char") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1825 1894])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((1) "rl_compentry_func_t")) type (:superclasses ("char") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1762 1824])
+            ("PARAMS" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ((((0) "rl_command_func_t")) type (:superclasses ("int") :type "typedef") nil nil)
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1670 1719])
+            ("_RL_FUNCTION_TYPEDEF" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1623 1643])
+            ("CPPFunction" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :pointer 2
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1353 1404])
+            ("CPFunction" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1295 1344])
+            ("VFunction" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1239 1286])
+            ("Function" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1185 1230])
+            ("_FUNCTION_DEF" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1118 1131]))          
+      :file "rltypedefs.h"
+      :pointmax 3194
+      :fsize 3193
+      :lastmodtime '(22011 51003 0 0)
+      :unmatched-syntax '((semantic-list 3087 . 3097) (semantic-list 3039 . 3048) (semantic-list 2996 . 3001) (semantic-list 2953 . 2959) (semantic-list 2906 . 2915) (semantic-list 2861 . 2869) (semantic-list 2820 . 2825) (semantic-list 2777 . 2783) (semantic-list 2730 . 2739) (semantic-list 2686 . 2694) (semantic-list 2608 . 2613) (semantic-list 2517 . 2530) (semantic-list 2300 . 2308) (semantic-list 2230 . 2236) (semantic-list 2105 . 2124) (semantic-list 2053 . 2062) (semantic-list 1996 . 2009) (semantic-list 1933 . 1954) (semantic-list 1868 . 1892) (semantic-list 1803 . 1822) (semantic-list 1707 . 1717) (TYPEDEF 1345 . 1352) (TYPEDEF 1287 . 1294) (TYPEDEF 1231 . 1238) (TYPEDEF 1177 . 1184))
+      :lexical-table 
+        '(("_RL_TYPEDEFS_H_")
+          ("_FUNCTION_DEF")
+          ("_RL_FUNCTION_TYPEDEF")
+          ("rl_ivoidfunc_t" . ((symbol "rl_hook_func_t" 2639 . 2653)))
+          )
+)
+    (semanticdb-table "rlstdc.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_RL_STDC_H_" variable (:constant-flag t) nil [963 974])
+            ("PARAMS" variable (:constant-flag t) nil [1316 1322]))          
+      :file "rlstdc.h"
+      :pointmax 1836
+      :fsize 1835
+      :lastmodtime '(22011 51003 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_RL_STDC_H_")
+          ("PARAMS" (spp-arg-list ("protos") 1322 . 1330) . ((symbol "protos" 1331 . 1337)))
+          )
+)
+    (semanticdb-table "chardefs.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_CHARDEFS_H_" variable (:constant-flag t) nil [925 937])
+            ("ctype.h" include (:system-flag t) nil [939 957])
+            ("string.h" include (:system-flag t) nil [1259 1280])
+            ("whitespace" variable (:constant-flag t) nil [1337 1347])
+            ("control_character_threshold" variable (:constant-flag t) nil [1498 1525])
+            ("control_character_mask" variable (:constant-flag t) nil [1578 1600])
+            ("meta_character_threshold" variable (:constant-flag t) nil [1633 1657])
+            ("control_character_bit" variable (:constant-flag t) nil [1708 1729])
+            ("meta_character_bit" variable (:constant-flag t) nil [1776 1794])
+            ("largest_char" variable (:constant-flag t) nil [1841 1853])
+            ("CTRL_CHAR" variable (:constant-flag t) nil [1903 1912])
+            ("META_CHAR" variable (:constant-flag t) nil [1983 1992])
+            ("CTRL" variable (:constant-flag t) nil [2061 2065])
+            ("META" variable (:constant-flag t) nil [2108 2112])
+            ("UNMETA" variable (:constant-flag t) nil [2152 2158])
+            ("UNCTRL" variable (:constant-flag t) nil [2200 2206])
+            ("IN_CTYPE_DOMAIN" variable (:constant-flag t) nil [2339 2354])
+            ("NON_NEGATIVE" variable (:constant-flag t) nil [2673 2685])
+            ("ISALNUM" variable (:constant-flag t) nil [2874 2881])
+            ("ISALPHA" variable (:constant-flag t) nil [2930 2937])
+            ("ISDIGIT" variable (:constant-flag t) nil [2986 2993])
+            ("ISLOWER" variable (:constant-flag t) nil [3042 3049])
+            ("ISPRINT" variable (:constant-flag t) nil [3098 3105])
+            ("ISUPPER" variable (:constant-flag t) nil [3154 3161])
+            ("ISXDIGIT" variable (:constant-flag t) nil [3210 3218])
+            ("_rl_lowercase_p" variable (:constant-flag t) nil [3269 3284])
+            ("_rl_uppercase_p" variable (:constant-flag t) nil [3328 3343])
+            ("_rl_digit_p" variable (:constant-flag t) nil [3387 3398])
+            ("_rl_pure_alphabetic" variable (:constant-flag t) nil [3439 3458])
+            ("ALPHABETIC" variable (:constant-flag t) nil [3502 3512])
+            ("_rl_to_upper" variable (:constant-flag t) nil [3581 3593])
+            ("_rl_to_lower" variable (:constant-flag t) nil [3662 3674])
+            ("_rl_digit_value" variable (:constant-flag t) nil [3775 3790])
+            ("_rl_isident" variable (:constant-flag t) nil [3844 3855])
+            ("ISOCTAL" variable (:constant-flag t) nil [3920 3927])
+            ("OCTVALUE" variable (:constant-flag t) nil [3973 3981])
+            ("HEXVALUE" variable (:constant-flag t) nil [4006 4014])
+            ("NEWLINE" variable (:constant-flag t) nil [4149 4156])
+            ("RETURN" variable (:constant-flag t) nil [4193 4199])
+            ("RUBOUT" variable (:constant-flag t) nil [4241 4247])
+            ("TAB" variable (:constant-flag t) nil [4281 4284])
+            ("ABORT_CHAR" variable (:constant-flag t) nil [4349 4359])
+            ("PAGE" variable (:constant-flag t) nil [4410 4414])
+            ("SPACE" variable (:constant-flag t) nil [4467 4472])
+            ("ESC" variable (:constant-flag t) nil [4536 4539]))          
+      :file "chardefs.h"
+      :pointmax 4578
+      :fsize 4577
+      :lastmodtime '(22011 51003 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("meta_character_threshold" . ((number "0x07f" 1658 . 1663)))
+          ("meta_character_bit" . ((number "0x080" 1795 . 1800)))
+          ("CTRL" (spp-arg-list ("c") 2065 . 2068) . ((semantic-list "((c) & control_character_mask)" 2069 . 2099)))
+          ("META" (spp-arg-list ("c") 2112 . 2115) . ((semantic-list "((c) | meta_character_bit)" 2116 . 2142)))
+          ("SPACE" . ((string "' '" 4473 . 4476)))
+          ("ESC" . ((symbol "CTRL" 4540 . 4544) (semantic-list "('[')" 4544 . 4549)))
+          ("whitespace" (spp-arg-list ("c") 1347 . 1350) . ((semantic-list "(((c) == ' ') || ((c) == '\\t'))" 1351 . 1382)))
+          ("IN_CTYPE_DOMAIN" (spp-arg-list ("c") 2354 . 2357) . ((number "1" 2358 . 2359)))
+          ("ISLOWER" (spp-arg-list ("c") 3049 . 3052) . ((semantic-list "(IN_CTYPE_DOMAIN (c) && islower (c))" 3053 . 3089)))
+          ("_rl_to_lower" (spp-arg-list ("c") 3674 . 3677) . ((semantic-list "(_rl_uppercase_p(c) ? tolower((unsigned char)c) : (c))" 3678 . 3732)))
+          ("_rl_isident" (spp-arg-list ("c") 3855 . 3858) . ((semantic-list "(ISALNUM(c) || (c) == '_')" 3859 . 3885)))
+          ("HEXVALUE" (spp-arg-list ("c") 4014 . 4017) . ((semantic-list "(((c) >= 'a' && (c) <= 'f') \\
+  	? (c)-'a'+10 \\
+  	: (c) >= 'A' && (c) <= 'F' ? (c)-'A'+10 : (c)-'0')" 4022 . 4123)))
+          ("RUBOUT" . ((number "0x7f" 4248 . 4252)))
+          ("TAB" . ((string "'\\t'" 4285 . 4289)))
+          ("control_character_threshold" . ((number "0x020" 1526 . 1531)))
+          ("_rl_lowercase_p" (spp-arg-list ("c") 3284 . 3287) . ((semantic-list "(NON_NEGATIVE(c) && ISLOWER(c))" 3288 . 3319)))
+          ("ALPHABETIC" (spp-arg-list ("c") 3512 . 3515) . ((semantic-list "(NON_NEGATIVE(c) && ISALNUM(c))" 3517 . 3548)))
+          ("largest_char" . ((number "255" 1854 . 1857)))
+          ("control_character_bit" . ((number "0x40" 1730 . 1734)))
+          ("ISALNUM" (spp-arg-list ("c") 2881 . 2884) . ((semantic-list "(IN_CTYPE_DOMAIN (c) && isalnum (c))" 2885 . 2921)))
+          ("ISUPPER" (spp-arg-list ("c") 3161 . 3164) . ((semantic-list "(IN_CTYPE_DOMAIN (c) && isupper (c))" 3165 . 3201)))
+          ("_rl_digit_p" (spp-arg-list ("c") 3398 . 3401) . ((semantic-list "((c) >= '0' && (c) <= '9')" 3403 . 3429)))
+          ("_rl_to_upper" (spp-arg-list ("c") 3593 . 3596) . ((semantic-list "(_rl_lowercase_p(c) ? toupper((unsigned char)c) : (c))" 3597 . 3651)))
+          ("ISOCTAL" (spp-arg-list ("c") 3927 . 3930) . ((semantic-list "((c) >= '0' && (c) <= '7')" 3931 . 3957)))
+          ("NEWLINE" . ((string "'\\n'" 4157 . 4161)))
+          ("NON_NEGATIVE" (spp-arg-list ("c") 2685 . 2688) . ((semantic-list "((unsigned char)(c) == (c))" 2689 . 2716)))
+          ("_rl_uppercase_p" (spp-arg-list ("c") 3343 . 3346) . ((semantic-list "(NON_NEGATIVE(c) && ISUPPER(c))" 3347 . 3378)))
+          ("ABORT_CHAR" . ((symbol "CTRL" 4360 . 4364) (semantic-list "('G')" 4364 . 4369)))
+          ("_rl_pure_alphabetic" (spp-arg-list ("c") 3458 . 3461) . ((semantic-list "(NON_NEGATIVE(c) && ISALPHA(c))" 3462 . 3493)))
+          ("control_character_mask" . ((number "0x1f" 1601 . 1605)))
+          ("_rl_digit_value" (spp-arg-list ("x") 3790 . 3793) . ((semantic-list "((x) - '0')" 3794 . 3805)))
+          ("ISDIGIT" (spp-arg-list ("c") 2993 . 2996) . ((semantic-list "(IN_CTYPE_DOMAIN (c) && isdigit (c))" 2997 . 3033)))
+          ("ISPRINT" (spp-arg-list ("c") 3105 . 3108) . ((semantic-list "(IN_CTYPE_DOMAIN (c) && isprint (c))" 3109 . 3145)))
+          ("PAGE" . ((symbol "CTRL" 4415 . 4419) (semantic-list "('L')" 4419 . 4424)))
+          ("_CHARDEFS_H_")
+          ("CTRL_CHAR" (spp-arg-list ("c") 1912 . 1915) . ((semantic-list "((c) < control_character_threshold && (((c) & 0x80) == 0))" 1916 . 1974)))
+          ("META_CHAR" (spp-arg-list ("c") 1992 . 1995) . ((semantic-list "((c) > meta_character_threshold && (c) <= largest_char)" 1996 . 2051)))
+          ("UNMETA" (spp-arg-list ("c") 2158 . 2161) . ((semantic-list "((c) & (~meta_character_bit))" 2162 . 2191)))
+          ("UNCTRL" (spp-arg-list ("c") 2206 . 2209) . ((symbol "_rl_to_upper" 2210 . 2222) (semantic-list "(((c)|control_character_bit))" 2222 . 2251)))
+          ("ISALPHA" (spp-arg-list ("c") 2937 . 2940) . ((semantic-list "(IN_CTYPE_DOMAIN (c) && isalpha (c))" 2941 . 2977)))
+          ("ISXDIGIT" (spp-arg-list ("c") 3218 . 3221) . ((semantic-list "(IN_CTYPE_DOMAIN (c) && isxdigit (c))" 3222 . 3259)))
+          ("OCTVALUE" (spp-arg-list ("c") 3981 . 3984) . ((semantic-list "((c) - '0')" 3985 . 3996)))
+          ("RETURN" . ((symbol "CTRL" 4200 . 4204) (semantic-list "('M')" 4204 . 4209)))
+          )
+))
+  :file "!usr!include!readline!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

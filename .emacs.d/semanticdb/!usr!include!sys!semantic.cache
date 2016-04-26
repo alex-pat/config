@@ -1634,9 +1634,191 @@
           )
 )
     (semanticdb-table "signal.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("signal.h" include (:system-flag t) nil [1 20]))          
       :file "signal.h"
+      :pointmax 21
       :fsize 20
-      :lastmodtime '(22215 43410 0 0)))
+      :lastmodtime '(22215 43410 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "io.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_SYS_IO_H" variable (:constant-flag t) nil [816 825])
+            ("features.h" include (:system-flag t) nil [829 850])
+            ("outsl" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [4823 4849])
+                    ("__addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4850 4869])
+                    ("__count" variable (:type "unsigned long int") (reparse-symbol arg-sub-list) [4877 4903]))                  )
+                (reparse-symbol extern-c-contents) [4811 5029])
+            ("outsw" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [4587 4613])
+                    ("__addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4614 4633])
+                    ("__count" variable (:type "unsigned long int") (reparse-symbol arg-sub-list) [4641 4667]))                  )
+                (reparse-symbol extern-c-contents) [4575 4793])
+            ("outsb" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [4351 4377])
+                    ("__addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4378 4397])
+                    ("__count" variable (:type "unsigned long int") (reparse-symbol arg-sub-list) [4405 4431]))                  )
+                (reparse-symbol extern-c-contents) [4339 4557])
+            ("insl" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [4129 4155])
+                    ("__addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4156 4169])
+                    ("__count" variable (:type "unsigned long int") (reparse-symbol arg-sub-list) [4170 4196]))                  )
+                (reparse-symbol extern-c-contents) [4118 4321])
+            ("insw" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [3908 3934])
+                    ("__addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3935 3948])
+                    ("__count" variable (:type "unsigned long int") (reparse-symbol arg-sub-list) [3949 3975]))                  )
+                (reparse-symbol extern-c-contents) [3897 4100])
+            ("insb" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [3687 3713])
+                    ("__addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3714 3727])
+                    ("__count" variable (:type "unsigned long int") (reparse-symbol arg-sub-list) [3728 3754]))                  )
+                (reparse-symbol extern-c-contents) [3676 3879])
+            ("outl_p" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__value" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3515 3536])
+                    ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [3537 3563]))                  )
+                (reparse-symbol extern-c-contents) [3502 3658])
+            ("outl" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__value" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3361 3382])
+                    ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [3383 3409]))                  )
+                (reparse-symbol extern-c-contents) [3350 3484])
+            ("outw_p" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__value" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [3182 3209])
+                    ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [3210 3236]))                  )
+                (reparse-symbol extern-c-contents) [3169 3332])
+            ("outw" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__value" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [3020 3047])
+                    ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [3048 3074]))                  )
+                (reparse-symbol extern-c-contents) [3009 3151])
+            ("outb_p" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__value" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [2846 2868])
+                    ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [2869 2895]))                  )
+                (reparse-symbol extern-c-contents) [2833 2991])
+            ("outb" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("__value" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [2690 2712])
+                    ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [2713 2739]))                  )
+                (reparse-symbol extern-c-contents) [2679 2815])
+            ("inl_p" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned int"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [2519 2545]))                  )
+                (reparse-symbol extern-c-contents) [2499 2661])
+            ("inl" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned int"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [2355 2381]))                  )
+                (reparse-symbol extern-c-contents) [2337 2481])
+            ("inw_p" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned short int"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [2170 2196]))                  )
+                (reparse-symbol extern-c-contents) [2144 2319])
+            ("inw" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned short int"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [1998 2024]))                  )
+                (reparse-symbol extern-c-contents) [1974 2126])
+            ("inb_p" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned char"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [1812 1838]))                  )
+                (reparse-symbol extern-c-contents) [1791 1956])
+            ("inb" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned char"
+                :arguments 
+                  ( ("__port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [1646 1672]))                  )
+                (reparse-symbol extern-c-contents) [1627 1773])
+            ("iopl" function
+               (:type "int"
+                :arguments 
+                  ( ("__level" variable (:type "int") (reparse-symbol arg-sub-list) [1549 1561]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1532 1570])
+            ("ioperm" function
+               (:type "int"
+                :arguments 
+                  ( ("__from" variable (:type "unsigned long int") (reparse-symbol arg-sub-list) [1291 1316])
+                    ("__num" variable (:type "unsigned long int") (reparse-symbol arg-sub-list) [1317 1341])
+                    ("__turn_on" variable (:type "int") (reparse-symbol arg-sub-list) [1361 1375]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1272 1384]))          
+      :file "io.h"
+      :pointmax 5086
+      :fsize 5085
+      :lastmodtime '(22215 43415 0 0)
+      :unmatched-syntax '((symbol 4802 . 4810) (STATIC 4795 . 4801) (symbol 4566 . 4574) (STATIC 4559 . 4565) (symbol 4330 . 4338) (STATIC 4323 . 4329) (symbol 4109 . 4117) (STATIC 4102 . 4108) (symbol 3888 . 3896) (STATIC 3881 . 3887) (symbol 3667 . 3675) (STATIC 3660 . 3666) (symbol 3493 . 3501) (STATIC 3486 . 3492) (symbol 3341 . 3349) (STATIC 3334 . 3340) (symbol 3160 . 3168) (STATIC 3153 . 3159) (symbol 3000 . 3008) (STATIC 2993 . 2999) (symbol 2824 . 2832) (STATIC 2817 . 2823) (symbol 2670 . 2678) (STATIC 2663 . 2669) (symbol 2490 . 2498) (STATIC 2483 . 2489) (symbol 2328 . 2336) (STATIC 2321 . 2327) (symbol 2135 . 2143) (STATIC 2128 . 2134) (symbol 1965 . 1973) (STATIC 1958 . 1964) (symbol 1782 . 1790) (STATIC 1775 . 1781) (symbol 1618 . 1626) (STATIC 1611 . 1617))
+      :lexical-table 
+        '(("_SYS_IO_H" . ((number "1" 826 . 827)))
+          )
+))
   :file "!usr!include!sys!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")
