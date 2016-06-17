@@ -1,13 +1,13 @@
 
 (defun on-frame-creating ()
   "This function sets font faces and other that not setted on starting emacs daemon"
-  (load-theme 'tango-dark t)
+  (load-theme 'deeper-blue t)
   (custom-set-faces
    ;; custom-set-faces was added by Custom.
    ;; If you edit it by hand, you could mess it up, so be careful.
    ;; Your init file should contain only one such instance.
    ;; If there is more than one, they won't work right.
-   '(default ((t (:family "Hack" :foundry "unknown" :slant normal :weight normal :height 98 :width normal))))) 
+   '(default ((t (:family "Hack" :foundry "unknown" :slant normal :weight normal :height 90 :width normal))))) 
   (toggle-frame-fullscreen))
 
 ;; (cons after-make-frame-functions '(on-frame-creating))
@@ -138,3 +138,6 @@
 (elpy-enable)
 (define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
 (define-key global-map (kbd "C-c o") 'iedit-mode)
+(shell-command "xmodmap ~/.Xmodmap")
+;; C-M-a
+;; C-M-d - down-list
