@@ -81,7 +81,9 @@ if beautiful.wallpaper then
    for s = 1, screen.count() do
       
       -- gears.wallpaper.centered("/home/postskript/Pictures/wallpapers/tron.png", s)
-      gears.wallpaper.maximized("/home/postskript/Pictures/wallpapers/pluto_planet_dwarf_planet_trans_neptunian_objects_news_97479_1920x1080.jpg", s, false)
+      
+gears.wallpaper.maximized("/home/postskript/Pictures/wallpapers/1358379858681.jpg", 
+s, false)
         -- gears.wallpaper.maximized(beautiful.wallpaper, s, true)
     end
 end
@@ -159,7 +161,23 @@ batterywidget:buttons(awful.util.table.join(
 			 awful.button({ }, 4, function () brightness("up") end),
 			 awful.button({ }, 5, function () brightness("down") end)
 ))
-vicious.register(batterywidget, vicious.widgets.bat, " | bat $1$2%", 5, "BAT0")
+-- vicious.register(batterywidget, vicious.widgets.bat, " | bat $1$2%", 5, "BAT0")
+vicious.register(batterywidget, vicious.widgets.bat,
+		 function (widget, args)
+		    if args[2] <= 20 and string.byte(args[1]) == 226 then
+		       naughty.notify({
+			     text = "Huston, we have a problem",
+			     title = "Battery dying: " .. args[2] .. "%",
+			     timeout = 5, hover_timeout = 0.5,
+			     position = "top_right",
+			     bg = "#F06060",
+			     fg = "#EEE9EF",
+			     width = 200,
+		       })
+		    end
+		    return " | bat " .. args[1] .. args[2] .."%"
+		 end, 5, "BAT0")
+		 
 
 volumewidget = wibox.widget.textbox()
 
@@ -316,6 +334,7 @@ globalkeys = awful.util.table.join(
    awful.key({ }, "XF86AudioMute", function () vol("toggle") end),
    awful.key({ }, "XF86MonBrightnessUp", function () brightness("up") end),
    awful.key({ }, "XF86MonBrightnessDown", function () brightness("down") end),
+   awful.key({ }, "XF86TouchpadToggle", function () awful.util.spawn("bash -c \"synclient TouchpadOff=\\$(synclient -l | grep -c 'TouchpadOff.*=.*0')\"", false) end),
    awful.key({ }, "Print", function () awful.util.spawn("spectacle", false) end),   
    
    -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
@@ -375,6 +394,19 @@ globalkeys = awful.util.table.join(
 	    mypromptbox[mouse.screen].widget,
 	    awful.util.eval, nil,
 	    awful.util.getdir("cache") .. "/history_eval")
+   end),
+   
+   awful.key({ modkey }, "c",
+      function ()
+	 awful.prompt.run({ prompt = "Calculate: " },
+	    mypromptbox[mouse.screen].widget,
+	    function (text)
+	       naughty.notify({
+		     text = 'Result: ' .. awful.util.pread("python -c \"from math import * ; print(" .. text .. ",end='')\""),
+		     position = "top_left",
+		     timeout = 5
+	       })
+	 end)
    end),
    -- Menubar
    awful.key({ modkey }, "p", function() menubar.show() end)
@@ -553,5 +585,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.util.spawn_with_shell("run_once emacs --daemon")
 awful.util.spawn_with_shell("run_once gxkb")
 awful.util.spawn_with_shell("run_once compton")
+awful.util.spawn_with_shell("run_once variety")
 -- awful.util.spawn_with_shell("run_once keyboard.sh")
 
