@@ -10,7 +10,8 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
-vicious = require("vicious")
+local lain = require("lain")
+local vicious = require("vicious")
 
 
 -- require("volume")
@@ -44,12 +45,14 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
-
+beautiful.init("/usr/share/awesome/themes/myzen/theme.lua")
+--beautiful.init("/home/postskript/.config/awesome/themes/powerline-darker/theme.lua")
 -- This is used later as the default terminal and editor to run.
-terminal = "konsole"
+terminal = "termite"
+file_manager = "ranger"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
+file_manager_cmd = terminal .. " -e " .. file_manager
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -70,20 +73,16 @@ local layouts =
     awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.floating,
-    awful.layout.suit.max,
     awful.layout.suit.magnifier,
-    awful.layout.suit.max.fullscreen
+    awful.layout.suit.max.fullscreen,
+    awful.layout.suit.max
 }
 -- }}}
 
 -- {{{ Wallpaper
 if beautiful.wallpaper then
    for s = 1, screen.count() do
-      
-      -- gears.wallpaper.centered("/home/postskript/Pictures/wallpapers/tron.png", s)
-      
-gears.wallpaper.maximized("/home/postskript/Pictures/wallpapers/1358379858681.jpg", 
-s, false)
+	gears.wallpaper.maximized("/home/postskript/Pictures/wallpapers/1358379858681.jpg", s, false)
         -- gears.wallpaper.maximized(beautiful.wallpaper, s, true)
     end
 end
@@ -138,15 +137,62 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 --  awful.util.table.join(awful.button({ }, 1, function () kbdcfg.switch() end))
 -- )
 
+-- {{{ awesompd
 
+local awesompd = require("awesompd/awesompd")
+musicwidget = awesompd:create() -- Create awesompd widget
+--  musicwidget.font = "Liberation Mono" -- Set widget font 
+musicwidget.scrolling = false -- If true, the text in the widget will be scrolled
+--  musicwidget.output_size = 30 -- Set the size of widget in symbols
+musicwidget.update_interval = 10 -- Set the update interval in seconds
+-- Set the folder where icons are located (change username to your login name)
+musicwidget.path_to_icons = "/home/postskript/.config/awesome/awesompd/icons" 
+musicwidget.show_album_cover = true
+-- Specify how big in pixels should an album cover be. Maximum value
+-- is 100.
+musicwidget.album_cover_size = 50
+-- This option is necessary if you want the album covers to be shown
+-- for your local tracks.
+musicwidget.mpd_config = "/etc/mpd.conf"
+-- Specify the browser you use so awesompd can open links from
+-- Jamendo in it.
+musicwidget.browser = "firefox"
+-- Specify decorators on the left and the right side of the
+-- widget. Or just leave empty strings if you decorate the widget
+-- from outside.
+musicwidget.ldecorator = " "
+musicwidget.rdecorator = ""
+-- Set all the servers to work with (here can be any servers you use)
+musicwidget.servers = {
+   { server = "localhost",
+     port = 6600 },
+   { server = "192.168.0.72",
+     port = 6600 } }
+-- Set the buttons of the widget
+musicwidget:register_buttons({ { "", awesompd.MOUSE_LEFT, musicwidget:command_toggle() },
+      { "Control", awesompd.MOUSE_SCROLL_UP, musicwidget:command_prev_track() },
+      { "Control", awesompd.MOUSE_SCROLL_DOWN, musicwidget:command_next_track() },
+      { "", awesompd.MOUSE_RIGHT, musicwidget:command_show_menu() },
+      { "", "XF86AudioLowerVolume", musicwidget:command_volume_down() },
+      { "", "XF86AudioRaiseVolume", musicwidget:command_volume_up() } })
+musicwidget:run() -- After all configuration is done, run the widget
+
+function music(action)
+   awful.util.spawn("mpc " .. action , false)
+   musicwidget:update_track()
+end
+-- }}}
+
+memicon = wibox.widget.imagebox(beautiful.widget_mem)
 memwidget = wibox.widget.textbox()
-vicious.register(memwidget, vicious.widgets.mem, " | ram $2MB ($1%)", 5)
+vicious.register(memwidget, vicious.widgets.mem, "$2MB $1% ", 5)
 
+cpuicon = wibox.widget.imagebox(beautiful.widget_cpu)
 cpuwidget = wibox.widget.textbox()    
-vicious.register(cpuwidget, vicious.widgets.cpu, " | cpu $1%", 2)
+vicious.register(cpuwidget, vicious.widgets.cpu, "$1%", 2)
 
 tempwidget = wibox.widget.textbox()
-vicious.register(tempwidget, vicious.widgets.thermal, " $1°C", 5, "thermal_zone0")
+vicious.register(tempwidget, vicious.widgets.thermal, " $1°C ", 5, "thermal_zone0")
 
 function brightness(state)
    if     state == "up" then
@@ -156,6 +202,7 @@ function brightness(state)
    end
 end
 
+baticon = wibox.widget.imagebox(beautiful.widget_battery)
 batterywidget = wibox.widget.textbox()
 batterywidget:buttons(awful.util.table.join(
 			 awful.button({ }, 4, function () brightness("up") end),
@@ -175,7 +222,7 @@ vicious.register(batterywidget, vicious.widgets.bat,
 			     width = 200,
 		       })
 		    end
-		    return " | bat " .. args[1] .. args[2] .."%"
+		    return args[1] .. args[2] .."% "
 		 end, 5, "BAT0")
 		 
 
@@ -197,23 +244,15 @@ volumewidget:buttons(awful.util.table.join(
 			awful.button({ }, 5, function () vol("down") end),
 			awful.button({ }, 1, function () vol("toggle") end)
 ))
-vicious.register(volumewidget, vicious.widgets.volume, " | $2 $1 |",1, "Master")
-
--- cpuwidget = wibox.widget.textbox()
--- cpuwidget:set_text(" | CPU")
--- cpuwidgettimer = timer({ timeout = 2 })
--- cpuwidgettimer:connect_signal("timeout",
--- 			      function()
--- 				 fh = assert(io.popen("grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf \"%.2f%\\n\", usage}'", "r"))
--- 				 -- fh = assert(io.popen("top -b -n 2 | grep Cpu | tail -n 4 | cut -d: -f2 | cut -d/ -f1  | python -c \"a=[float(input()) for i in range(0,4)];print('%.2f'%(sum(a)/4))\"", "r"))
--- 				 -- fh = assert(io.popen("top -b -n 2 | grep Cpu | tail -n 4 | cut -d: -f2 | cut -d/ -f1", "r"))
--- 				 cpuwidget:set_text(" | CPU " .. fh:read("*l") )
--- 				 fh:close()
--- 			      end
--- )
--- cpuwidgettimer:start()
+vicious.register(volumewidget, vicious.widgets.volume, " $2 $1 ",1, "Master")
 
 
+
+-- Separators
+spr = wibox.widget.textbox(' ')
+separators = lain.util.separators
+arrl_dl = separators.arrow_left(beautiful.arrow_color, "alpha")
+arrl_ld = separators.arrow_left("alpha", beautiful.arrow_color)
 
 
 
@@ -295,18 +334,38 @@ for s = 1, screen.count() do
     local left_layout = wibox.layout.fixed.horizontal()
     -- left_layout:add(mylauncher)
     left_layout:add(mytaglist[s])
+    left_layout:add(spr)
     left_layout:add(mypromptbox[s])
+    left_layout:add(spr)
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
+
+    local right_layout_toggle = true
+    local function right_layout_add (...)
+        local arg = {...}
+        if right_layout_toggle then
+            right_layout:add(arrl_ld)
+            for i, n in pairs(arg) do
+                right_layout:add(wibox.widget.background(n, beautiful.arrow_color))
+            end
+        else
+            right_layout:add(arrl_dl)
+            for i, n in pairs(arg) do
+                right_layout:add(n)
+            end
+        end
+        right_layout_toggle = not right_layout_toggle
+    end
+
     if s == 1 then right_layout:add(wibox.widget.systray()) end
-    right_layout:add(batterywidget)
-    right_layout:add(cpuwidget)
-    right_layout:add(tempwidget)
-    right_layout:add(memwidget)
-    right_layout:add(volumewidget)
-    right_layout:add(mytextclock)    
-    right_layout:add(mylayoutbox[s])
+    right_layout:add(spr)
+    right_layout_add(baticon, batterywidget)
+    right_layout_add(cpuicon, cpuwidget, tempwidget)
+    right_layout_add(memicon, memwidget)
+    right_layout_add(musicwidget.widget, volumewidget)
+    right_layout_add(mytextclock)    
+    right_layout_add(mylayoutbox[s])
     
     -- Now bring it all together (with the tasklist in the middle)
     local layout = wibox.layout.align.horizontal()
@@ -329,20 +388,27 @@ root.buttons(awful.util.table.join(
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
 
-   awful.key({ }, "XF86AudioRaiseVolume", function () vol("up") end),
-   awful.key({ }, "XF86AudioLowerVolume", function () vol("down") end ),
-   awful.key({ }, "XF86AudioMute", function () vol("toggle") end),
-   awful.key({ }, "XF86MonBrightnessUp", function () brightness("up") end),
-   awful.key({ }, "XF86MonBrightnessDown", function () brightness("down") end),
-   awful.key({ }, "XF86TouchpadToggle", function () awful.util.spawn("bash -c \"synclient TouchpadOff=\\$(synclient -l | grep -c 'TouchpadOff.*=.*0')\"", false) end),
-   awful.key({ }, "Print", function () awful.util.spawn("spectacle", false) end),   
+   awful.key({       }, "XF86AudioRaiseVolume", function () vol("up") end),
+   awful.key({       }, "XF86AudioLowerVolume", function () vol("down") end ),
+   awful.key({       }, "XF86AudioMute", function () vol("toggle") end),
+   awful.key({       }, "XF86MonBrightnessUp", function () brightness("up") end),
+   awful.key({       }, "XF86MonBrightnessDown", function () brightness("down") end),
+   awful.key({       }, "XF86TouchpadToggle", function () awful.util.spawn("bash -c \"synclient TouchpadOff=\\$(synclient -l | grep -c 'TouchpadOff.*=.*0')\"", false) end),
+   awful.key({       }, "XF86AudioStop", function () music("stop") end),
+   awful.key({       }, "XF86AudioPlay", function () music("toggle") end),
+   awful.key({       }, "XF86AudioNext", function () music("next") end),
+   awful.key({       }, "XF86AudioPrev", function () music("prev") end),
+   awful.key({       }, "Print", function() awful.util.spawn("scrot '/home/postskript/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png'") end ),
+   awful.key({"Shift"}, "Print", function() awful.util.spawn("scrot -u '/home/postskript/Pictures/screenshots/%Y-%m-%d-%H-%M-%S.png'") end ),
    
    -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
    -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
    awful.key({ modkey,           }, "a",      awful.tag.viewprev       ),
    awful.key({ modkey,           }, "d",      awful.tag.viewnext       ),
+   awful.key({ modkey, "Shift"   }, "f", function () awful.util.spawn(file_manager_cmd) end),
    awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
-
+   awful.key({ modkey,           }, "e", function () awful.util.spawn("emacsclient -c") end),
+   
    awful.key({ modkey,           }, "j",
       function ()
 	 awful.client.focus.byidx( 1)
@@ -581,10 +647,4 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
-awful.util.spawn_with_shell("run_once emacs --daemon")
-awful.util.spawn_with_shell("run_once gxkb")
-awful.util.spawn_with_shell("run_once compton")
-awful.util.spawn_with_shell("run_once variety")
--- awful.util.spawn_with_shell("run_once keyboard.sh")
 

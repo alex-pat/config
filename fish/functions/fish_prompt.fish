@@ -1,0 +1,1 @@
+/home/postskript/.config/fisherman/nitro/fish_prompt.fish

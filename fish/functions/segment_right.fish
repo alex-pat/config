@@ -1,0 +1,1 @@
+/home/postskript/.config/fisherman/segment/segment_right.fish

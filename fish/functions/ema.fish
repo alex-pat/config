@@ -1,0 +1,1 @@
+alias ema "emacsclient -nw"
