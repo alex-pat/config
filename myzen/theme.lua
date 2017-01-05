@@ -18,7 +18,7 @@ white = "#ffffff"
 
 -- {{{ Main
 theme = {}
-theme.wallpaper = "/usr/share/awesome/themes/myburn/myburn-background.png"
+theme.wallpaper = "/usr/share/awesome/themes/myzen/myzen-background.png"
 -- }}}
 
 -- {{{ Styles
@@ -44,7 +44,7 @@ theme.border_marked = "#CC9393"
 
 -- {{{
 
-theme.arrow_color                           = "#666666"
+theme.arrow_color                           = "#555555"
 theme.taglist_fg_focus                      = theme.fg_focus
 theme.tasklist_bg_focus                     = theme.bg_normal 
 theme.tasklist_fg_focus                     = theme.fg_focus
@@ -130,6 +130,10 @@ theme.layout_max        = "/usr/share/awesome/themes/myzen/layouts/max.png"
 theme.layout_fullscreen = "/usr/share/awesome/themes/myzen/layouts/fullscreen.png"
 theme.layout_magnifier  = "/usr/share/awesome/themes/myzen/layouts/magnifier.png"
 theme.layout_floating   = "/usr/share/awesome/themes/myzen/layouts/floating.png"
+theme.layout_cornerne   = "/usr/share/awesome/themes/myzen/layouts/cornerne.png"
+theme.layout_cornernw   = "/usr/share/awesome/themes/myzen/layouts/cornernw.png"
+theme.layout_cornerse   = "/usr/share/awesome/themes/myzen/layouts/cornerse.png"
+theme.layout_cornersw   = "/usr/share/awesome/themes/myzen/layouts/cornersw.png"
 -- }}}
 
 -- {{{ Titlebar

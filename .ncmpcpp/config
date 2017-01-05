@@ -6,5 +6,6 @@ visualizer_in_stereo = "yes"
 visualizer_type = "spectrum" (spectrum/wave)
 visualizer_look = "+▍"
 #visualizer_look = "∙▋"
+progressbar_look = "─╼─"
 user_interface = "alternative"
 mpd_music_dir = "/mnt/Data/music"
