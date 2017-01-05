@@ -54,7 +54,6 @@ local freq_table =
 local calendar = nil
 local todo = nil
 local orgfile = nil
-local orgtext = nil
 local offset = 0
 
 local data = nil
@@ -267,7 +266,7 @@ local function create_orgfile()
                fg = "#EEE9EF",
          })
       else
-         local content = fd:read("*all"):gsub('<',''):gsub('>','')
+         local content = fd:read("*all"):gsub('<',''):gsub('>',''):gsub('#[^\n]*\n','')
          for _ = 1, 2 do
             content = content:gsub("%*%*"," *")
          end
