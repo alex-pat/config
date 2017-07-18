@@ -22,7 +22,7 @@ theme.wallpaper = "/usr/share/awesome/themes/myzen/myzen-background.png"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Terminus 8"
+theme.font      = "Dina 6"
 
 -- {{{ Colors
 theme.fg_normal  = "#DDDDFF"
@@ -164,4 +164,8 @@ theme.widget_mem = "/usr/share/awesome/themes/myzen/icons/mem.png"
 theme.widget_cpu = "/usr/share/awesome/themes/myzen/icons/cpu.png"
 theme.widget_battery = "/usr/share/awesome/themes/myzen/icons/battery_empty.png"
    
+theme.fullscreen_hide_border = true
+-- theme.wibar_ontop = true
+theme.wibar_opacity = 0.8
+
 return theme

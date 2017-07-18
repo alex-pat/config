@@ -9,6 +9,7 @@ local awful = require('awful')
 local beautiful = require('beautiful')
 local naughty = require('naughty')
 local format = string.format
+local gears = require("gears")
 
 local module_path = (...):match ("(.+/)[^/]+$") or ""
 
@@ -196,7 +197,7 @@ function awesompd:create()
 
 -- Default user options
    instance.servers = { { server = "localhost", port = 6600 } }
-   instance.font = "Terminus"
+   instance.font = "Dina"
    instance.font_color = beautiful.fg_normal
    instance.background = beautiful.bg_normal
    instance.scrolling = true
@@ -212,7 +213,7 @@ function awesompd:create()
 -- Smart Update (sets timer to check/update widget near when the current track should end)
    instance.track_position = "00:00"
    instance.track_duration = "00:00"
-   instance.smart_update_timer = timer({ timeout = instance.update_interval })
+   instance.smart_update_timer = gears.timer({ timeout = instance.update_interval })
    -- Widget configuration
    instance.widget:connect_signal("mouse::enter", function(c)
 	    instance:update_track()
@@ -249,12 +250,12 @@ function awesompd:run()
       scheduler.register_recurring("awesompd_update", self.update_interval,
                                    function() self:update_track() end)
    else
-      self.update_widget_timer = timer({ timeout = 1 })
+      self.update_widget_timer = gears.timer({ timeout = 1 })
       self.update_widget_timer:connect_signal("timeout", function()
                                                  self:update_widget()
                                                          end)
       self.update_widget_timer:start()
-      self.update_track_timer = timer({ timeout = self.update_interval })
+      self.update_track_timer = gears.timer({ timeout = self.update_interval })
       self.update_track_timer:connect_signal("timeout", function()
                                                 self:update_track()
                                                         end)
@@ -1063,7 +1064,7 @@ function awesompd:smart_update()
       local rem = (dur - pos) + 1
       if (rem < self.update_interval) then
 	 -- Little time remaining, lets update when it runs out 
-	 local smart_timer = timer({ timeout = rem })
+	 local smart_timer = gears.timer({ timeout = rem })
 	 smart_timer:connect_signal("timeout", function()
 	    smart_timer:stop()
 	    self:update_track()

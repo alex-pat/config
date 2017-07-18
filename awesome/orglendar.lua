@@ -20,7 +20,8 @@ local orglendar = { files = {},
                     font = theme.font or 'monospace 8',
                     parse_on_show = true,
                     limit_todo_length = nil,
-                    date_format = "%d-%m-%Y" }
+					max_tasts_displayed = 20,
+                    date_format = "%H:%M %d-%m-%Y" }
 
 local freq_table =
    { d = { lapse = 86400,
@@ -224,8 +225,9 @@ local function create_todo()
       maxlen = limit_todo_length
    end
    local prev_date, limit, tname
+   local tasks = 1
    for i, task in ipairs(data.tasks) do
-      if strip_time(prev_date) ~= strip_time(task.date) then
+      if true then   -- strip_time(prev_date) ~= strip_time(task.date)
          result = result ..
             format('<span weight = "bold" foreground = "%s">%s</span>\n',
                    orglendar.event_color,
@@ -242,6 +244,11 @@ local function create_todo()
          result = result .. "\n"
       end
       prev_date = task.date
+
+	  tasks = tasks + 1
+	  if tasks > orglendar.max_tasts_displayed then
+		 break
+	  end
    end
    if result == "" then
       result = " "
@@ -254,25 +261,26 @@ local orgtext = nil
 local function create_orgfile()
    if orgtext then return orgtext end
    local orgtext = ""
-   for _, file in pairs(orglendar.files) do
-      local fd = io.open(file, "r")
-      if not fd then
-         print("W: orglendar: cannot find " .. file)
-         naughty.notify({
-               text = "W: orglendar: cannot find " .. file,
-               timeout = 5, hover_timeout = 0.5,
-               position = "top_right",
-               bg = "#F06060",
-               fg = "#EEE9EF",
-         })
-      else
-         local content = fd:read("*all"):gsub('<',''):gsub('>',''):gsub('#[^\n]*\n','')
-         for _ = 1, 2 do
-            content = content:gsub("%*%*"," *")
-         end
-         fd:close()
-         orgtext = orgtext .. "\n" .. file:gsub('.*/','') .. "\n" .. content
-      end
+   local file = orglendar.files[1]
+   local fd = io.open(file, "r")
+   if not fd then
+	  print("W: orglendar: cannot find " .. file)
+	  naughty.notify({
+			text = "W: orglendar: cannot find " .. file,
+			timeout = 5, hover_timeout = 0.5,
+			position = "top_right",
+			bg = "#F06060",
+			fg = "#EEE9EF",
+	  })
+   else
+	  local content = fd:read("*all"):gsub('<',''):gsub('>',''):gsub('#[^\n]*\n','')
+
+	  content = content:gsub("%*%*%*%*","   *")
+	  content = content:gsub("%*%*%*","  *")
+	  content = content:gsub("%*%*"," *")
+
+	  fd:close()
+	  orgtext = orgtext .. "\n" .. file:gsub('.*/','') .. "\n" .. content
    end
    return format('<span font="%s" foreground="%s">%s</span>',
                  orglendar.font, orglendar.text_color, orgtext), data.maxlen + 3

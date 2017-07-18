@@ -1,0 +1,4 @@
+$ fisher ls
+* nitro			  humanize_duration	  pwd_is_home
+  git_util		  last_job_id		  rustup
+  host_info		  pwd_info		  segment
