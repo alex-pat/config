@@ -42,11 +42,11 @@ set autoindent
 " Не переносить строки
 set nowrap
 " Преобразование Таба в пробелы
-set expandtab
+" set expandtab
 " Размер табуляции по умолчанию
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=8
+set softtabstop=8
+set tabstop=8
 " Включаем "умные" отступы, например, авто отступ после `{`
 set smartindent
 " Отображение парных символов
@@ -61,19 +61,23 @@ set history=200
 set wildmenu
 " Настройка отображения специальных символов
 set list listchars=tab:→\ ,trail:·
+set clipboard=unnamedplus
 " Включение сторонних плагинов
 filetype plugin on
 
+set tags=./tags,tags;
 set laststatus=2
 
 call plug#begin('~/.vim/plugged')
-
 Plug 'scrooloose/nerdtree'
-"Plug 'powerline/powerline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'mbbill/undotree'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 let g:airline_powerline_fonts = 1
 "let g:airline_symbols.space = "\ua0"
 let g:airline_theme='bubblegum'
+nmap <Space>s <Plug>(easymotion-overwin-f)
