@@ -60,7 +60,9 @@ set history=200
 " Дополнительная информация в строке состояния
 set wildmenu
 " Настройка отображения специальных символов
-set list listchars=tab:→\ ,trail:·
+set list listchars=tab:→\ ,trail:·,extends:…
+set textwidth=80
+"autocmd BufNewFile,BufRead *.c,*.h exec 'match Todo /\%>' . &textwidth . 'v.\+/'
 set clipboard=unnamedplus
 " Включение сторонних плагинов
 filetype plugin on
